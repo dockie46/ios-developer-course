@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E751BDD42BDAB6C8009C49D7 /* urban_patrikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751BDD32BDAB6C8009C49D7 /* urban_patrikApp.swift */; };
+		E751BDD62BDAB6C8009C49D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751BDD52BDAB6C8009C49D7 /* ContentView.swift */; };
+		E751BDD82BDAB6C9009C49D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E751BDD72BDAB6C9009C49D7 /* Assets.xcassets */; };
+		E751BDDB2BDAB6C9009C49D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E751BDDA2BDAB6C9009C49D7 /* Preview Assets.xcassets */; };
+		E751BDE52BDAB6C9009C49D7 /* urban_patrikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751BDE42BDAB6C9009C49D7 /* urban_patrikTests.swift */; };
+		E751BDEF2BDAB6C9009C49D7 /* urban_patrikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751BDEE2BDAB6C9009C49D7 /* urban_patrikUITests.swift */; };
+		E751BDF12BDAB6C9009C49D7 /* urban_patrikUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E751BDF02BDAB6C9009C49D7 /* urban_patrikUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E751BDE12BDAB6C9009C49D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E751BDC82BDAB6C8009C49D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E751BDCF2BDAB6C8009C49D7;
+			remoteInfo = urban.patrik;
+		};
+		E751BDEB2BDAB6C9009C49D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E751BDC82BDAB6C8009C49D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E751BDCF2BDAB6C8009C49D7;
+			remoteInfo = urban.patrik;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E751BDD02BDAB6C8009C49D7 /* urban.patrik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = urban.patrik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E751BDD32BDAB6C8009C49D7 /* urban_patrikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urban_patrikApp.swift; sourceTree = "<group>"; };
+		E751BDD52BDAB6C8009C49D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E751BDD72BDAB6C9009C49D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E751BDDA2BDAB6C9009C49D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E751BDE02BDAB6C9009C49D7 /* urban.patrikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = urban.patrikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E751BDE42BDAB6C9009C49D7 /* urban_patrikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urban_patrikTests.swift; sourceTree = "<group>"; };
+		E751BDEA2BDAB6C9009C49D7 /* urban.patrikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = urban.patrikUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E751BDEE2BDAB6C9009C49D7 /* urban_patrikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urban_patrikUITests.swift; sourceTree = "<group>"; };
+		E751BDF02BDAB6C9009C49D7 /* urban_patrikUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urban_patrikUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E751BDCD2BDAB6C8009C49D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E751BDDD2BDAB6C9009C49D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E751BDE72BDAB6C9009C49D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E751BDC72BDAB6C8009C49D7 = {
+			isa = PBXGroup;
+			children = (
+				E751BDD22BDAB6C8009C49D7 /* urban.patrik */,
+				E751BDE32BDAB6C9009C49D7 /* urban.patrikTests */,
+				E751BDED2BDAB6C9009C49D7 /* urban.patrikUITests */,
+				E751BDD12BDAB6C8009C49D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E751BDD12BDAB6C8009C49D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E751BDD02BDAB6C8009C49D7 /* urban.patrik.app */,
+				E751BDE02BDAB6C9009C49D7 /* urban.patrikTests.xctest */,
+				E751BDEA2BDAB6C9009C49D7 /* urban.patrikUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E751BDD22BDAB6C8009C49D7 /* urban.patrik */ = {
+			isa = PBXGroup;
+			children = (
+				E751BDD32BDAB6C8009C49D7 /* urban_patrikApp.swift */,
+				E751BDD52BDAB6C8009C49D7 /* ContentView.swift */,
+				E751BDD72BDAB6C9009C49D7 /* Assets.xcassets */,
+				E751BDD92BDAB6C9009C49D7 /* Preview Content */,
+			);
+			path = urban.patrik;
+			sourceTree = "<group>";
+		};
+		E751BDD92BDAB6C9009C49D7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E751BDDA2BDAB6C9009C49D7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E751BDE32BDAB6C9009C49D7 /* urban.patrikTests */ = {
+			isa = PBXGroup;
+			children = (
+				E751BDE42BDAB6C9009C49D7 /* urban_patrikTests.swift */,
+			);
+			path = urban.patrikTests;
+			sourceTree = "<group>";
+		};
+		E751BDED2BDAB6C9009C49D7 /* urban.patrikUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E751BDEE2BDAB6C9009C49D7 /* urban_patrikUITests.swift */,
+				E751BDF02BDAB6C9009C49D7 /* urban_patrikUITestsLaunchTests.swift */,
+			);
+			path = urban.patrikUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E751BDCF2BDAB6C8009C49D7 /* urban.patrik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E751BDF42BDAB6C9009C49D7 /* Build configuration list for PBXNativeTarget "urban.patrik" */;
+			buildPhases = (
+				E751BDCC2BDAB6C8009C49D7 /* Sources */,
+				E751BDCD2BDAB6C8009C49D7 /* Frameworks */,
+				E751BDCE2BDAB6C8009C49D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = urban.patrik;
+			productName = urban.patrik;
+			productReference = E751BDD02BDAB6C8009C49D7 /* urban.patrik.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E751BDDF2BDAB6C9009C49D7 /* urban.patrikTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E751BDF72BDAB6C9009C49D7 /* Build configuration list for PBXNativeTarget "urban.patrikTests" */;
+			buildPhases = (
+				E751BDDC2BDAB6C9009C49D7 /* Sources */,
+				E751BDDD2BDAB6C9009C49D7 /* Frameworks */,
+				E751BDDE2BDAB6C9009C49D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E751BDE22BDAB6C9009C49D7 /* PBXTargetDependency */,
+			);
+			name = urban.patrikTests;
+			productName = urban.patrikTests;
+			productReference = E751BDE02BDAB6C9009C49D7 /* urban.patrikTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E751BDE92BDAB6C9009C49D7 /* urban.patrikUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E751BDFA2BDAB6C9009C49D7 /* Build configuration list for PBXNativeTarget "urban.patrikUITests" */;
+			buildPhases = (
+				E751BDE62BDAB6C9009C49D7 /* Sources */,
+				E751BDE72BDAB6C9009C49D7 /* Frameworks */,
+				E751BDE82BDAB6C9009C49D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E751BDEC2BDAB6C9009C49D7 /* PBXTargetDependency */,
+			);
+			name = urban.patrikUITests;
+			productName = urban.patrikUITests;
+			productReference = E751BDEA2BDAB6C9009C49D7 /* urban.patrikUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E751BDC82BDAB6C8009C49D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					E751BDCF2BDAB6C8009C49D7 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					E751BDDF2BDAB6C9009C49D7 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E751BDCF2BDAB6C8009C49D7;
+					};
+					E751BDE92BDAB6C9009C49D7 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E751BDCF2BDAB6C8009C49D7;
+					};
+				};
+			};
+			buildConfigurationList = E751BDCB2BDAB6C8009C49D7 /* Build configuration list for PBXProject "urban.patrik" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E751BDC72BDAB6C8009C49D7;
+			productRefGroup = E751BDD12BDAB6C8009C49D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E751BDCF2BDAB6C8009C49D7 /* urban.patrik */,
+				E751BDDF2BDAB6C9009C49D7 /* urban.patrikTests */,
+				E751BDE92BDAB6C9009C49D7 /* urban.patrikUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E751BDCE2BDAB6C8009C49D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E751BDDB2BDAB6C9009C49D7 /* Preview Assets.xcassets in Resources */,
+				E751BDD82BDAB6C9009C49D7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E751BDDE2BDAB6C9009C49D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E751BDE82BDAB6C9009C49D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E751BDCC2BDAB6C8009C49D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E751BDD62BDAB6C8009C49D7 /* ContentView.swift in Sources */,
+				E751BDD42BDAB6C8009C49D7 /* urban_patrikApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E751BDDC2BDAB6C9009C49D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E751BDE52BDAB6C9009C49D7 /* urban_patrikTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E751BDE62BDAB6C9009C49D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E751BDF12BDAB6C9009C49D7 /* urban_patrikUITestsLaunchTests.swift in Sources */,
+				E751BDEF2BDAB6C9009C49D7 /* urban_patrikUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E751BDE22BDAB6C9009C49D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E751BDCF2BDAB6C8009C49D7 /* urban.patrik */;
+			targetProxy = E751BDE12BDAB6C9009C49D7 /* PBXContainerItemProxy */;
+		};
+		E751BDEC2BDAB6C9009C49D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E751BDCF2BDAB6C8009C49D7 /* urban.patrik */;
+			targetProxy = E751BDEB2BDAB6C9009C49D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E751BDF22BDAB6C9009C49D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E751BDF32BDAB6C9009C49D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E751BDF52BDAB6C9009C49D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"urban.patrik/Preview Content\"";
+				DEVELOPMENT_TEAM = 32A3C6TC3D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.course.app.urban-patrik";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E751BDF62BDAB6C9009C49D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"urban.patrik/Preview Content\"";
+				DEVELOPMENT_TEAM = 32A3C6TC3D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.course.app.urban-patrik";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E751BDF82BDAB6C9009C49D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A3C6TC3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.course.app.urban-patrikTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/urban.patrik.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/urban.patrik";
+			};
+			name = Debug;
+		};
+		E751BDF92BDAB6C9009C49D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A3C6TC3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.course.app.urban-patrikTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/urban.patrik.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/urban.patrik";
+			};
+			name = Release;
+		};
+		E751BDFB2BDAB6C9009C49D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A3C6TC3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.course.app.urban-patrikUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = urban.patrik;
+			};
+			name = Debug;
+		};
+		E751BDFC2BDAB6C9009C49D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32A3C6TC3D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.course.app.urban-patrikUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = urban.patrik;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E751BDCB2BDAB6C8009C49D7 /* Build configuration list for PBXProject "urban.patrik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E751BDF22BDAB6C9009C49D7 /* Debug */,
+				E751BDF32BDAB6C9009C49D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E751BDF42BDAB6C9009C49D7 /* Build configuration list for PBXNativeTarget "urban.patrik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E751BDF52BDAB6C9009C49D7 /* Debug */,
+				E751BDF62BDAB6C9009C49D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E751BDF72BDAB6C9009C49D7 /* Build configuration list for PBXNativeTarget "urban.patrikTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E751BDF82BDAB6C9009C49D7 /* Debug */,
+				E751BDF92BDAB6C9009C49D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E751BDFA2BDAB6C9009C49D7 /* Build configuration list for PBXNativeTarget "urban.patrikUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E751BDFB2BDAB6C9009C49D7 /* Debug */,
+				E751BDFC2BDAB6C9009C49D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E751BDC82BDAB6C8009C49D7 /* Project object */;
+}
