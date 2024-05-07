@@ -25,13 +25,15 @@ struct UserActionEventType: EventType {
 
 struct ScreenViewEvent: AnalyticEvent {
     typealias E = ScreenViewEventType
-    var type: E
+    
+    var type: ScreenViewEventType
     var parameters: [String: Any]
 }
 
 struct UserActionEvent: AnalyticEvent {
     typealias E = UserActionEventType
-    var type: E
+    
+    var type: UserActionEventType
     var parameters: [String: Any]
 }
 
@@ -40,13 +42,13 @@ protocol AnalyticsService {
 }
 
 class ConsoleAnalyticsService: AnalyticsService {
-    var logs: [String] = []
+    
+    var logs: [any AnalyticEvent] = []
     
     func logEvent<E: AnalyticEvent>(_ event: E) {
         
-        let log = "Event: \(event.name), Parameters: \(event.parameters)"
-        print(log)
-        logs.append(log)
+        print("Event: \(event.name), Parameters: \(event.parameters)")
+        logs.append(event)
     }
 }
 
