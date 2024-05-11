@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7A9D19F2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9D19E2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift */; };
 		E7B066082BEEB1A600EBE919 /* Course_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */; };
 		E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066092BEEB1A600EBE919 /* ContentView.swift */; };
-		E7B0660C2BEEB1A800EBE919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B0660B2BEEB1A800EBE919 /* Assets.xcassets */; };
+		E7B0660C2BEEB1A800EBE919 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B0660B2BEEB1A800EBE919 /* Images.xcassets */; };
 		E7B0660F2BEEB1A800EBE919 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B0660E2BEEB1A800EBE919 /* Preview Assets.xcassets */; };
 		E7B0661C2BEEBACB00EBE919 /* Course_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0661B2BEEBACB00EBE919 /* Course_AppUITests.swift */; };
 		E7B0661E2BEEBACB00EBE919 /* Course_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0661D2BEEBACB00EBE919 /* Course_AppUITestsLaunchTests.swift */; };
@@ -21,6 +22,14 @@
 		E7B066482BEED49500EBE919 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */; };
 		E7B066492BEED49800EBE919 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7B066442BEED15E00EBE919 /* Poppins-Regular.ttf */; };
 		E7B0664B2BEED65500EBE919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */; };
+		E7B066532BF0038800EBE919 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B066522BF0038800EBE919 /* Colors.xcassets */; };
+		E7B066562BF00B1200EBE919 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7B066552BF00B1200EBE919 /* HomeViewController.xib */; };
+		E7B066572BF00B1200EBE919 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066542BF00B1200EBE919 /* HomeViewController.swift */; };
+		E7B0665A2BF011C000EBE919 /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066592BF011C000EBE919 /* MockDataProvider.swift */; };
+		E7B0665D2BF012E900EBE919 /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0665C2BF012E900EBE919 /* LabelCollectionViewCell.swift */; };
+		E7B066602BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0665F2BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift */; };
+		E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066612BF0159D00EBE919 /* ReusableIdentifier.swift */; };
+		E7B066642BF0199700EBE919 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7A9D19E2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7B066042BEEB1A600EBE919 /* App Course Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Course Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_AppApp.swift; sourceTree = "<group>"; };
 		E7B066092BEEB1A600EBE919 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E7B0660B2BEEB1A800EBE919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7B0660B2BEEB1A800EBE919 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E7B0660E2BEEB1A800EBE919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7B066192BEEBACB00EBE919 /* Course AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Course AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B0661B2BEEBACB00EBE919 /* Course_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_AppUITests.swift; sourceTree = "<group>"; };
@@ -59,6 +69,14 @@
 		E7B066452BEED15E00EBE919 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7B066522BF0038800EBE919 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E7B066542BF00B1200EBE919 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E7B066552BF00B1200EBE919 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E7B066592BF011C000EBE919 /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
+		E7B0665C2BF012E900EBE919 /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7B0665F2BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableIdenfifier.swift"; sourceTree = "<group>"; };
+		E7B066612BF0159D00EBE919 /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
+		E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,16 +128,14 @@
 		E7B066062BEEB1A600EBE919 /* Course App */ = {
 			isa = PBXGroup;
 			children = (
-				E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */,
-				E7B066452BEED15E00EBE919 /* Poppins-Bold.ttf */,
-				E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */,
-				E7B066442BEED15E00EBE919 /* Poppins-Regular.ttf */,
-				E7B0663D2BEEC84600EBE919 /* Course-App-Info.plist */,
+				E7B0665E2BF0154E00EBE919 /* Common */,
+				E7B066582BF0117200EBE919 /* DataApi */,
 				E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */,
-				E7B066092BEEB1A600EBE919 /* ContentView.swift */,
-				E7B0660B2BEEB1A800EBE919 /* Assets.xcassets */,
+				E7B0663D2BEEC84600EBE919 /* Course-App-Info.plist */,
+				E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */,
+				E7B0664F2BF0027400EBE919 /* Views */,
+				E7B0664D2BF0024100EBE919 /* Resources */,
 				E7B0660D2BEEB1A800EBE919 /* Preview Content */,
-				E7B0663E2BEEC88A00EBE919 /* Configuration.swift */,
 			);
 			path = "Course App";
 			sourceTree = "<group>";
@@ -156,6 +172,81 @@
 				E7B066342BEEC1A600EBE919 /* Production.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		E7B0664D2BF0024100EBE919 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7B0660B2BEEB1A800EBE919 /* Images.xcassets */,
+				E7B066522BF0038800EBE919 /* Colors.xcassets */,
+				E7B0663E2BEEC88A00EBE919 /* Configuration.swift */,
+				E7B0664E2BF0026000EBE919 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E7B0664E2BF0026000EBE919 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E7B066452BEED15E00EBE919 /* Poppins-Bold.ttf */,
+				E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */,
+				E7B066442BEED15E00EBE919 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E7B0664F2BF0027400EBE919 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7B066512BF0029100EBE919 /* UIKit */,
+				E7B066502BF0028300EBE919 /* SwiftUI */,
+				E7B066092BEEB1A600EBE919 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E7B066502BF0028300EBE919 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		E7B066512BF0029100EBE919 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E7B0665B2BF012B800EBE919 /* UICollectionViewCell */,
+				E7B066542BF00B1200EBE919 /* HomeViewController.swift */,
+				E7B066552BF00B1200EBE919 /* HomeViewController.xib */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E7B066582BF0117200EBE919 /* DataApi */ = {
+			isa = PBXGroup;
+			children = (
+				E7B066592BF011C000EBE919 /* MockDataProvider.swift */,
+			);
+			path = DataApi;
+			sourceTree = "<group>";
+		};
+		E7B0665B2BF012B800EBE919 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E7B0665C2BF012E900EBE919 /* LabelCollectionViewCell.swift */,
+				E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */,
+				E7A9D19E2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E7B0665E2BF0154E00EBE919 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E7B0665F2BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift */,
+				E7B066612BF0159D00EBE919 /* ReusableIdentifier.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,14 +358,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B066532BF0038800EBE919 /* Colors.xcassets in Resources */,
 				E7B066332BEEBE9100EBE919 /* Development.xcconfig in Resources */,
 				E7B0664B2BEED65500EBE919 /* GoogleService-Info.plist in Resources */,
 				E7B066482BEED49500EBE919 /* Poppins-MediumItalic.ttf in Resources */,
 				E7B066492BEED49800EBE919 /* Poppins-Regular.ttf in Resources */,
 				E7B066402BEEC97E00EBE919 /* Production.xcconfig in Resources */,
 				E7B066472BEED49200EBE919 /* Poppins-Bold.ttf in Resources */,
+				E7B066562BF00B1200EBE919 /* HomeViewController.xib in Resources */,
 				E7B0660F2BEEB1A800EBE919 /* Preview Assets.xcassets in Resources */,
-				E7B0660C2BEEB1A800EBE919 /* Assets.xcassets in Resources */,
+				E7B0660C2BEEB1A800EBE919 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,9 +392,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A9D19F2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift in Sources */,
 				E7B0663F2BEEC88A00EBE919 /* Configuration.swift in Sources */,
+				E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */,
 				E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */,
+				E7B066602BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift in Sources */,
+				E7B0665A2BF011C000EBE919 /* MockDataProvider.swift in Sources */,
+				E7B0665D2BF012E900EBE919 /* LabelCollectionViewCell.swift in Sources */,
+				E7B066642BF0199700EBE919 /* ImageCollectionViewCell.swift in Sources */,
 				E7B066082BEEB1A600EBE919 /* Course_AppApp.swift in Sources */,
+				E7B066572BF00B1200EBE919 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
