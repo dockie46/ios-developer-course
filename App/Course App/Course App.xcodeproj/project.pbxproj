@@ -21,6 +21,8 @@
 		E7B066482BEED49500EBE919 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */; };
 		E7B066492BEED49800EBE919 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7B066442BEED15E00EBE919 /* Poppins-Regular.ttf */; };
 		E7B0664B2BEED65500EBE919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */; };
+		E7DEF4502BF0C05E00F0BDB9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E7DEF44F2BF0C05E00F0BDB9 /* FirebaseFirestore */; };
+		E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		E7B066452BEED15E00EBE919 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DEF4502BF0C05E00F0BDB9 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +98,7 @@
 				E7B0661A2BEEBACB00EBE919 /* Course AppUITests */,
 				E7B066292BEEBC2B00EBE919 /* Course Tests */,
 				E7B066052BEEB1A600EBE919 /* Products */,
+				E7DEF44E2BF0C05E00F0BDB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +120,7 @@
 				E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */,
 				E7B066442BEED15E00EBE919 /* Poppins-Regular.ttf */,
 				E7B0663D2BEEC84600EBE919 /* Course-App-Info.plist */,
+				E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */,
 				E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */,
 				E7B066092BEEB1A600EBE919 /* ContentView.swift */,
 				E7B0660B2BEEB1A800EBE919 /* Assets.xcassets */,
@@ -158,6 +164,13 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		E7DEF44E2BF0C05E00F0BDB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +188,9 @@
 				E7B066432BEECE4500EBE919 /* PBXTargetDependency */,
 			);
 			name = "Course App";
+			packageProductDependencies = (
+				E7DEF44F2BF0C05E00F0BDB9 /* FirebaseFirestore */,
+			);
 			productName = "Course App";
 			productReference = E7B066042BEEB1A600EBE919 /* App Course Dev.app */;
 			productType = "com.apple.product-type.application";
@@ -299,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */,
 				E7B0663F2BEEC88A00EBE919 /* Configuration.swift in Sources */,
 				E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */,
 				E7B066082BEEB1A600EBE919 /* Course_AppApp.swift in Sources */,
@@ -929,6 +946,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E7B066412BEECE1E00EBE919 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
+		};
+		E7DEF44F2BF0C05E00F0BDB9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7B0664C2BEED77F00EBE919 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

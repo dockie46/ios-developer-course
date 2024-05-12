@@ -10,7 +10,6 @@ import SwiftUI
 
 struct ContentView: View {
     private let logger = Logger()
-    let configuration = Configuration.default.apiJokesBaseURL
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,8 +19,7 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            logger.trace("On appear method")
-            logger.info("Jokes base url \(configuration)")
+            logger.trace("Contentview on appear method")
         }
     }
 }
