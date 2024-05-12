@@ -26,8 +26,8 @@ final class HomeViewController: UIViewController {
     
     // MARK: DataSource
     private lazy var dataProvider = MockDataProvider()
-    typealias DataSource = UICollectionViewDiffableDataSource<SectionData, Joke>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<SectionData, Joke>
+    typealias DataSource = UICollectionViewDiffableDataSource<SectionData, [Joke]>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<SectionData, [Joke]>
     
     private lazy var dataSource = makeDataSource()
     private lazy var cancellables = Set<AnyCancellable>()
@@ -53,7 +53,7 @@ private extension HomeViewController {
         guard dataSource.snapshot().numberOfSections == 0 else {
             //
             var snapshot = dataSource.snapshot()
-            snapshot.moveItem((data.first?.jokes.first)!, afterItem: (data.first?.jokes.last)!)
+//            snapshot.moveItem((data.first?.jokes.first)!, afterItem: (data.first?.jokes.last)!)
 
             dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
             return
@@ -63,7 +63,7 @@ private extension HomeViewController {
         snapshot.appendSections(data)
 
         data.forEach { section in
-            snapshot.appendItems(section.jokes, toSection: section)
+            snapshot.appendItems([section.jokes], toSection: section)
         }
 
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
@@ -74,8 +74,9 @@ private extension HomeViewController {
             
             let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
 
-            let imageCell: ImageCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-            imageCell.imageView.image = section.jokes[indexPath.item].image
+            let imageCell: HorizontalScrollingCell = collectionView.dequeueReusableCell(for: indexPath)
+            imageCell.jokes = section.jokes
+            
             return imageCell
         }
 
@@ -129,7 +130,8 @@ private extension HomeViewController {
         categoriesCollectionView.contentInsetAdjustmentBehavior = .never
         categoriesCollectionView.showsVerticalScrollIndicator = false
         categoriesCollectionView.delegate = self
-        categoriesCollectionView.register(ImageCollectionViewCell.self)
+//        categoriesCollectionView.register(ImageCollectionViewCell.self)
+        categoriesCollectionView.register(HorizontalScrollingCell.self)
         categoriesCollectionView.register(LabelCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
 
         let layout = UICollectionViewFlowLayout()
