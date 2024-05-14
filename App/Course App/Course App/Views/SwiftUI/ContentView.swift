@@ -10,20 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     private let logger = Logger()
-    private let isUIKit = true
     var body: some View {
-        homeView
-        .onAppear {
-            logger.trace("ContentView on appear method")
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, world!")
         }
-    }
-    
-    @ViewBuilder
-    var homeView: some View {
-        if isUIKit {
-            HomeView()
-        } else {
-            
+        .padding()
+        .onAppear {
+            logger.trace("Contentview on appear method")
         }
     }
 }

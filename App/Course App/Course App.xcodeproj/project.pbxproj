@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C72CB082BF4038900E894B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C72CB072BF4038900E894B0 /* Images.xcassets */; };
+		2C9910572BF150D30025FDEE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2C9910562BF150D30025FDEE /* FirebaseAnalytics */; };
 		E7A9D19F2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9D19E2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift */; };
 		E7B066082BEEB1A600EBE919 /* Course_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */; };
 		E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066092BEEB1A600EBE919 /* ContentView.swift */; };
-		E7B0660C2BEEB1A800EBE919 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B0660B2BEEB1A800EBE919 /* Images.xcassets */; };
 		E7B0660F2BEEB1A800EBE919 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B0660E2BEEB1A800EBE919 /* Preview Assets.xcassets */; };
 		E7B0661C2BEEBACB00EBE919 /* Course_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0661B2BEEBACB00EBE919 /* Course_AppUITests.swift */; };
 		E7B0661E2BEEBACB00EBE919 /* Course_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0661D2BEEBACB00EBE919 /* Course_AppUITestsLaunchTests.swift */; };
@@ -18,9 +19,6 @@
 		E7B066332BEEBE9100EBE919 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E7B066312BEEBE7300EBE919 /* Development.xcconfig */; };
 		E7B0663F2BEEC88A00EBE919 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0663E2BEEC88A00EBE919 /* Configuration.swift */; };
 		E7B066402BEEC97E00EBE919 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E7B066342BEEC1A600EBE919 /* Production.xcconfig */; };
-		E7B066472BEED49200EBE919 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7B066452BEED15E00EBE919 /* Poppins-Bold.ttf */; };
-		E7B066482BEED49500EBE919 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */; };
-		E7B066492BEED49800EBE919 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7B066442BEED15E00EBE919 /* Poppins-Regular.ttf */; };
 		E7B0664B2BEED65500EBE919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */; };
 		E7B066532BF0038800EBE919 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B066522BF0038800EBE919 /* Colors.xcassets */; };
 		E7B066562BF00B1200EBE919 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7B066552BF00B1200EBE919 /* HomeViewController.xib */; };
@@ -30,6 +28,7 @@
 		E7B066602BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0665F2BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift */; };
 		E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066612BF0159D00EBE919 /* ReusableIdentifier.swift */; };
 		E7B066642BF0199700EBE919 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */; };
+		E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C72CB042BF4028D00E894B0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../../../Downloads/iOS_developer-main-2/Sources/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		2C72CB052BF4028D00E894B0 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../../../../../../Downloads/iOS_developer-main-2/Sources/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2C72CB062BF4028D00E894B0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../../../Downloads/iOS_developer-main-2/Sources/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		2C72CB072BF4038900E894B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E7A9D19E2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7B066042BEEB1A600EBE919 /* App Course Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Course Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_AppApp.swift; sourceTree = "<group>"; };
 		E7B066092BEEB1A600EBE919 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E7B0660B2BEEB1A800EBE919 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E7B0660E2BEEB1A800EBE919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7B066192BEEBACB00EBE919 /* Course AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Course AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B0661B2BEEBACB00EBE919 /* Course_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_AppUITests.swift; sourceTree = "<group>"; };
@@ -65,9 +67,6 @@
 		E7B066342BEEC1A600EBE919 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		E7B0663D2BEEC84600EBE919 /* Course-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Course-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E7B0663E2BEEC88A00EBE919 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		E7B066442BEED15E00EBE919 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		E7B066452BEED15E00EBE919 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7B066522BF0038800EBE919 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E7B066542BF00B1200EBE919 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		E7B0665F2BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableIdenfifier.swift"; sourceTree = "<group>"; };
 		E7B066612BF0159D00EBE919 /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9910572BF150D30025FDEE /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +113,7 @@
 				E7B0661A2BEEBACB00EBE919 /* Course AppUITests */,
 				E7B066292BEEBC2B00EBE919 /* Course Tests */,
 				E7B066052BEEB1A600EBE919 /* Products */,
+				E7DEF44E2BF0C05E00F0BDB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,11 +132,13 @@
 			children = (
 				E7B0665E2BF0154E00EBE919 /* Common */,
 				E7B066582BF0117200EBE919 /* DataApi */,
-				E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */,
-				E7B0663D2BEEC84600EBE919 /* Course-App-Info.plist */,
-				E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */,
 				E7B0664F2BF0027400EBE919 /* Views */,
 				E7B0664D2BF0024100EBE919 /* Resources */,
+				E7B0663D2BEEC84600EBE919 /* Course-App-Info.plist */,
+				E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */,
+				E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */,
+				E7B0663E2BEEC88A00EBE919 /* Configuration.swift */,
+				E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */,
 				E7B0660D2BEEB1A800EBE919 /* Preview Content */,
 			);
 			path = "Course App";
@@ -177,9 +181,8 @@
 		E7B0664D2BF0024100EBE919 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E7B0660B2BEEB1A800EBE919 /* Images.xcassets */,
+				2C72CB072BF4038900E894B0 /* Images.xcassets */,
 				E7B066522BF0038800EBE919 /* Colors.xcassets */,
-				E7B0663E2BEEC88A00EBE919 /* Configuration.swift */,
 				E7B0664E2BF0026000EBE919 /* Fonts */,
 			);
 			path = Resources;
@@ -188,9 +191,9 @@
 		E7B0664E2BF0026000EBE919 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				E7B066452BEED15E00EBE919 /* Poppins-Bold.ttf */,
-				E7B066462BEED15F00EBE919 /* Poppins-MediumItalic.ttf */,
-				E7B066442BEED15E00EBE919 /* Poppins-Regular.ttf */,
+				2C72CB042BF4028D00E894B0 /* Poppins-Bold.ttf */,
+				2C72CB052BF4028D00E894B0 /* Poppins-MediumItalic.ttf */,
+				2C72CB062BF4028D00E894B0 /* Poppins-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -200,7 +203,6 @@
 			children = (
 				E7B066512BF0029100EBE919 /* UIKit */,
 				E7B066502BF0028300EBE919 /* SwiftUI */,
-				E7B066092BEEB1A600EBE919 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 		E7B066502BF0028300EBE919 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E7B066092BEEB1A600EBE919 /* ContentView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -249,6 +252,13 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		E7DEF44E2BF0C05E00F0BDB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +276,9 @@
 				E7B066432BEECE4500EBE919 /* PBXTargetDependency */,
 			);
 			name = "Course App";
+			packageProductDependencies = (
+				2C9910562BF150D30025FDEE /* FirebaseAnalytics */,
+			);
 			productName = "Course App";
 			productReference = E7B066042BEEB1A600EBE919 /* App Course Dev.app */;
 			productType = "com.apple.product-type.application";
@@ -340,7 +353,7 @@
 			mainGroup = E7B065FB2BEEB1A600EBE919;
 			packageReferences = (
 				E7B066412BEECE1E00EBE919 /* XCRemoteSwiftPackageReference "SwiftLint" */,
-				E7B0664C2BEED77F00EBE919 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2C9910552BF150B60025FDEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = E7B066052BEEB1A600EBE919 /* Products */;
 			projectDirPath = "";
@@ -360,14 +373,11 @@
 			files = (
 				E7B066532BF0038800EBE919 /* Colors.xcassets in Resources */,
 				E7B066332BEEBE9100EBE919 /* Development.xcconfig in Resources */,
+				2C72CB082BF4038900E894B0 /* Images.xcassets in Resources */,
 				E7B0664B2BEED65500EBE919 /* GoogleService-Info.plist in Resources */,
-				E7B066482BEED49500EBE919 /* Poppins-MediumItalic.ttf in Resources */,
-				E7B066492BEED49800EBE919 /* Poppins-Regular.ttf in Resources */,
 				E7B066402BEEC97E00EBE919 /* Production.xcconfig in Resources */,
-				E7B066472BEED49200EBE919 /* Poppins-Bold.ttf in Resources */,
 				E7B066562BF00B1200EBE919 /* HomeViewController.xib in Resources */,
 				E7B0660F2BEEB1A800EBE919 /* Preview Assets.xcassets in Resources */,
-				E7B0660C2BEEB1A800EBE919 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A9D19F2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift in Sources */,
+				E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */,
 				E7B0663F2BEEC88A00EBE919 /* Configuration.swift in Sources */,
 				E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */,
 				E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */,
@@ -1006,6 +1017,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2C9910552BF150B60025FDEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
 		E7B066412BEECE1E00EBE919 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/SwiftLint.git";
@@ -1014,17 +1033,14 @@
 				minimumVersion = 0.54.0;
 			};
 		};
-		E7B0664C2BEED77F00EBE919 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.25.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2C9910562BF150D30025FDEE /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C9910552BF150B60025FDEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
 		E7B066422BEECE4500EBE919 /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E7B066412BEECE1E00EBE919 /* XCRemoteSwiftPackageReference "SwiftLint" */;

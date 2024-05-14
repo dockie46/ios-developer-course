@@ -74,10 +74,10 @@ private extension HomeViewController {
             
             let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
 
-            let imageCell: HorizontalScrollingCell = collectionView.dequeueReusableCell(for: indexPath)
-            imageCell.jokes = section.jokes
+            let imageHorizontalScrollCell: HorizontalScrollingCell = collectionView.dequeueReusableCell(for: indexPath)
+            imageHorizontalScrollCell.setAndReloadData(section.jokes)
             
-            return imageCell
+            return imageHorizontalScrollCell
         }
 
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
@@ -107,7 +107,7 @@ extension HomeViewController: UICollectionViewDelegate {
 }
 
 
-// MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
