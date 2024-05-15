@@ -273,7 +273,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E7B066432BEECE4500EBE919 /* PBXTargetDependency */,
+				E7F9A8782BF4F893007F07C3 /* PBXTargetDependency */,
 			);
 			name = "Course App";
 			packageProductDependencies = (
@@ -446,9 +446,9 @@
 			target = E7B066032BEEB1A600EBE919 /* Course App */;
 			targetProxy = E7B0662C2BEEBC2B00EBE919 /* PBXContainerItemProxy */;
 		};
-		E7B066432BEECE4500EBE919 /* PBXTargetDependency */ = {
+		E7F9A8782BF4F893007F07C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = E7B066422BEECE4500EBE919 /* SwiftLintPlugin */;
+			productRef = E7F9A8772BF4F893007F07C3 /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1041,10 +1041,10 @@
 			package = 2C9910552BF150B60025FDEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		E7B066422BEECE4500EBE919 /* SwiftLintPlugin */ = {
+		E7F9A8772BF4F893007F07C3 /* SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E7B066412BEECE1E00EBE919 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = "plugin:SwiftLintPlugin";
+			productName = "plugin:SwiftLintBuildToolPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

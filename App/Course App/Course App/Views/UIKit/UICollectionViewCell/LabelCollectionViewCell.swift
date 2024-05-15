@@ -44,7 +44,7 @@ private extension LabelCollectionViewCell {
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
             nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5)
         ])
     }
 }

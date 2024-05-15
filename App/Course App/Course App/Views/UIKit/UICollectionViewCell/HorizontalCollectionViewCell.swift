@@ -8,24 +8,19 @@
 import UIKit
 
 class HorizontalScrollingCell: UICollectionViewCell, ReusableIdentifier {
-    
     private let collectionView: UICollectionView!
     private var jokes: [Joke] = []
-    
     override init(frame: CGRect) {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
         super.init(frame: frame)
         setupCollectionView()
         setupConstraints()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     private func setupCollectionView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
@@ -58,14 +53,14 @@ extension HorizontalScrollingCell : UICollectionViewDataSource {
     }
 }
 
-// MARK: - UICollectionViewLayout
+// MARK: UICollectionViewLayout
 extension HorizontalScrollingCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         return CGSize(width: bounds.width, height: bounds.height)
     }
 }
 
-// MARK: -  PassData
+// MARK: PassData
 extension HorizontalScrollingCell {
     func setAndReloadData(_ jokes: [Joke]) {
         self.jokes = jokes
