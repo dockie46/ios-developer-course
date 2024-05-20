@@ -12,7 +12,7 @@ import SwiftUI
 struct Course_AppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     private let logger = Logger()
-    private let isUIKit = true
+    private let isUIKit = false
     var body: some Scene {
         WindowGroup {
             homeView
@@ -28,7 +28,7 @@ struct Course_AppApp: App {
         if isUIKit {
             HomeView()
         } else {
-            // HomeViewSwiftUI()
+            SwipingView()
         }
     }
 }

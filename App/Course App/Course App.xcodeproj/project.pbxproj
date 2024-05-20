@@ -17,7 +17,7 @@
 		E7B0661E2BEEBACB00EBE919 /* Course_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0661D2BEEBACB00EBE919 /* Course_AppUITestsLaunchTests.swift */; };
 		E7B0662B2BEEBC2B00EBE919 /* Course_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0662A2BEEBC2B00EBE919 /* Course_Tests.swift */; };
 		E7B066332BEEBE9100EBE919 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E7B066312BEEBE7300EBE919 /* Development.xcconfig */; };
-		E7B0663F2BEEC88A00EBE919 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0663E2BEEC88A00EBE919 /* Configuration.swift */; };
+		E7B0663F2BEEC88A00EBE919 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0663E2BEEC88A00EBE919 /* BuildConfiguration.swift */; };
 		E7B066402BEEC97E00EBE919 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E7B066342BEEC1A600EBE919 /* Production.xcconfig */; };
 		E7B0664B2BEED65500EBE919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */; };
 		E7B066532BF0038800EBE919 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B066522BF0038800EBE919 /* Colors.xcassets */; };
@@ -28,6 +28,13 @@
 		E7B066602BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B0665F2BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift */; };
 		E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066612BF0159D00EBE919 /* ReusableIdentifier.swift */; };
 		E7B066642BF0199700EBE919 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */; };
+		E7B5781B2BFA8CC8007AA9FC /* HomeViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5781A2BFA8CC8007AA9FC /* HomeViewSwiftUI.swift */; };
+		E7B5781F2BFA8FDA007AA9FC /* BorderedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5781E2BFA8FDA007AA9FC /* BorderedModifier.swift */; };
+		E7B578212BFA9014007AA9FC /* Image+ResizableBordered.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B578202BFA9014007AA9FC /* Image+ResizableBordered.swift */; };
+		E7B578242BFA9048007AA9FC /* SelectableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B578232BFA9048007AA9FC /* SelectableButtonStyle.swift */; };
+		E7B578262BFA9D3C007AA9FC /* SwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B578252BFA9D3C007AA9FC /* SwipingView.swift */; };
+		E7B578282BFAA6B1007AA9FC /* SwipingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */; };
+		E7B5782A2BFAAD14007AA9FC /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B578292BFAAD14007AA9FC /* DesignSystem.swift */; };
 		E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +73,7 @@
 		E7B066312BEEBE7300EBE919 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		E7B066342BEEC1A600EBE919 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		E7B0663D2BEEC84600EBE919 /* Course-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Course-App-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E7B0663E2BEEC88A00EBE919 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		E7B0663E2BEEC88A00EBE919 /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
 		E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7B066522BF0038800EBE919 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E7B066542BF00B1200EBE919 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +83,13 @@
 		E7B0665F2BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableIdenfifier.swift"; sourceTree = "<group>"; };
 		E7B066612BF0159D00EBE919 /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7B5781A2BFA8CC8007AA9FC /* HomeViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSwiftUI.swift; sourceTree = "<group>"; };
+		E7B5781E2BFA8FDA007AA9FC /* BorderedModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedModifier.swift; sourceTree = "<group>"; };
+		E7B578202BFA9014007AA9FC /* Image+ResizableBordered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+ResizableBordered.swift"; sourceTree = "<group>"; };
+		E7B578232BFA9048007AA9FC /* SelectableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButtonStyle.swift; sourceTree = "<group>"; };
+		E7B578252BFA9D3C007AA9FC /* SwipingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingView.swift; sourceTree = "<group>"; };
+		E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingCard.swift; sourceTree = "<group>"; };
+		E7B578292BFAAD14007AA9FC /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,12 +146,13 @@
 			children = (
 				E7B0665E2BF0154E00EBE919 /* Common */,
 				E7B066582BF0117200EBE919 /* DataApi */,
-				E7B0664F2BF0027400EBE919 /* Views */,
 				E7B0664D2BF0024100EBE919 /* Resources */,
+				E7B5781C2BFA8E86007AA9FC /* SharedUI */,
+				E7B0664F2BF0027400EBE919 /* Views */,
 				E7B0663D2BEEC84600EBE919 /* Course-App-Info.plist */,
 				E7B0664A2BEED65500EBE919 /* GoogleService-Info.plist */,
 				E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */,
-				E7B0663E2BEEC88A00EBE919 /* Configuration.swift */,
+				E7B0663E2BEEC88A00EBE919 /* BuildConfiguration.swift */,
 				E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */,
 				E7B0660D2BEEB1A800EBE919 /* Preview Content */,
 			);
@@ -211,6 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				E7B066092BEEB1A600EBE919 /* ContentView.swift */,
+				E7B5781A2BFA8CC8007AA9FC /* HomeViewSwiftUI.swift */,
+				E7B578252BFA9D3C007AA9FC /* SwipingView.swift */,
+				E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -250,6 +268,33 @@
 				E7B066612BF0159D00EBE919 /* ReusableIdentifier.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E7B5781C2BFA8E86007AA9FC /* SharedUI */ = {
+			isa = PBXGroup;
+			children = (
+				E7B578222BFA9038007AA9FC /* Styles */,
+				E7B5781D2BFA8FC2007AA9FC /* ViewModifiers */,
+				E7B578292BFAAD14007AA9FC /* DesignSystem.swift */,
+			);
+			path = SharedUI;
+			sourceTree = "<group>";
+		};
+		E7B5781D2BFA8FC2007AA9FC /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E7B5781E2BFA8FDA007AA9FC /* BorderedModifier.swift */,
+				E7B578202BFA9014007AA9FC /* Image+ResizableBordered.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		E7B578222BFA9038007AA9FC /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				E7B578232BFA9048007AA9FC /* SelectableButtonStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		E7DEF44E2BF0C05E00F0BDB9 /* Frameworks */ = {
@@ -402,17 +447,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B578282BFAA6B1007AA9FC /* SwipingCard.swift in Sources */,
 				E7A9D19F2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift in Sources */,
 				E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */,
-				E7B0663F2BEEC88A00EBE919 /* Configuration.swift in Sources */,
+				E7B0663F2BEEC88A00EBE919 /* BuildConfiguration.swift in Sources */,
+				E7B578242BFA9048007AA9FC /* SelectableButtonStyle.swift in Sources */,
 				E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */,
 				E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */,
 				E7B066602BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift in Sources */,
 				E7B0665A2BF011C000EBE919 /* MockDataProvider.swift in Sources */,
+				E7B578262BFA9D3C007AA9FC /* SwipingView.swift in Sources */,
+				E7B5781F2BFA8FDA007AA9FC /* BorderedModifier.swift in Sources */,
 				E7B0665D2BF012E900EBE919 /* LabelCollectionViewCell.swift in Sources */,
+				E7B5782A2BFAAD14007AA9FC /* DesignSystem.swift in Sources */,
 				E7B066642BF0199700EBE919 /* ImageCollectionViewCell.swift in Sources */,
+				E7B578212BFA9014007AA9FC /* Image+ResizableBordered.swift in Sources */,
 				E7B066082BEEB1A600EBE919 /* Course_AppApp.swift in Sources */,
 				E7B066572BF00B1200EBE919 /* HomeViewController.swift in Sources */,
+				E7B5781B2BFA8CC8007AA9FC /* HomeViewSwiftUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
