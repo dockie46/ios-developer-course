@@ -74,8 +74,9 @@ private extension HomeViewController {
             
             let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
 
-            let imageHorizontalScrollCell: HorizontalScrollingCell = collectionView.dequeueReusableCell(for: indexPath)
-            imageHorizontalScrollCell.setAndReloadData(section.jokes)
+            let imageHorizontalScrollCell: HorizontalCollectionSwiftUICell = collectionView.dequeueReusableCell(for: indexPath)
+            imageHorizontalScrollCell.configure(with: section.jokes)
+//            imageHorizontalScrollCell.setAndReloadData(section.jokes)
             
             return imageHorizontalScrollCell
         }
@@ -130,8 +131,7 @@ private extension HomeViewController {
         categoriesCollectionView.contentInsetAdjustmentBehavior = .never
         categoriesCollectionView.showsVerticalScrollIndicator = false
         categoriesCollectionView.delegate = self
-//        categoriesCollectionView.register(ImageCollectionViewCell.self)
-        categoriesCollectionView.register(HorizontalScrollingCell.self)
+        categoriesCollectionView.register(HorizontalCollectionSwiftUICell.self)
         categoriesCollectionView.register(LabelCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
 
         let layout = UICollectionViewFlowLayout()

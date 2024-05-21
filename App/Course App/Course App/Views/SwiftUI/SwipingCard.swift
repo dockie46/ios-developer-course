@@ -29,8 +29,11 @@ struct SwipingCard: View {
         let description: String
     }
     
+    // MARK: Private variables
     private let swipingAction: Action<SwipeState>
     private let configuration: Configuration
+    @State private var offset: CGSize = .zero
+    @State private var color: Color = .bg.opacity(0.7)
     
     init(
         configuration: Configuration,
@@ -41,18 +44,98 @@ struct SwipingCard: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Spacer()
+            VStack {
+                Spacer()
+                // scratch view
+                
+                ScratchView(
+                    image: configuration.image,
+                    text: configuration.description
+                )
+                Spacer()
+                cardDescription
+            }
+            Spacer()
+        }
+        .background(color)
+        .cornerRadius(15)
+        .offset(x: offset.width, y: offset.height * 0.5)
+        .rotationEffect(.degrees(Double(offset.width / 40)))
+        .gesture(dragGesture)
     }
     
     private var cardDescription: some View {
         Text(configuration.title)
-            .textTypeModifier(textType: .h1Title)
+            .textTypeModifier(textType: .normal)
             .padding(10)
             .background(Color.black.opacity(0.5))
             .cornerRadius(10)
             .padding()
     }
+    
+    // MARK: Drag gesture
+    private var dragGesture: some Gesture {
+        
+        DragGesture()
+            .onChanged { gesture in
+                offset = gesture.translation
+                withAnimation {
+                    swiping(translation: offset)
+                }
+                
+            }
+            .onEnded { _ in
+                withAnimation {
+                    finishSwipe(translation: offset)
+                }
+                
+            }
+    }
 }
+
+// MARK: - Swipe logic
+private extension SwipingCard {
+    func finishSwipe(translation: CGSize) {
+        
+        
+        // swipe left
+        if -500...(-200) ~= translation.width {
+            offset = CGSize(width: -500, height: 0)
+            swipingAction(.finished(direction: .left))
+            
+        } else if 200...500 ~= translation.width  { // swipe right
+            offset = CGSize(width: 500, height: 0)
+            swipingAction(.finished(direction: .right))
+        }
+        else {
+            // re-center
+            offset = .zero
+            color = .bg.opacity(0.7)
+            swipingAction(.cancelled)
+        }
+    }
+    
+    func swiping(translation: CGSize) {
+        // swipe left
+        if translation.width < -60 {
+            color = .green
+                .opacity(Double(abs(translation.width) / 500) + 0.6)
+            swipingAction(.swiping(direction: .left))
+        } else if translation.width > 60 {
+            // swipe right
+            color = .red
+                .opacity(Double(translation.width / 500) + 0.6)
+            swipingAction(.swiping(direction: .right))
+        } else {
+            color = .bg.opacity(0.7)
+            swipingAction(.cancelled)
+        }
+        
+    }
+}
+
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {

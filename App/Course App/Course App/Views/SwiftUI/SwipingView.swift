@@ -41,6 +41,7 @@ struct SwipingView: View {
                 Spacer()
             }
         }
+        .defaultBackgroundColor()
     }
 }
 

@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C39C78D2BFD3E7400DB5B33 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C72CB042BF4028D00E894B0 /* Poppins-Bold.ttf */; };
+		2C39C78E2BFD3E7800DB5B33 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C72CB052BF4028D00E894B0 /* Poppins-MediumItalic.ttf */; };
+		2C39C78F2BFD3E7B00DB5B33 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C72CB062BF4028D00E894B0 /* Poppins-Regular.ttf */; };
+		2C39C7912BFD510B00DB5B33 /* BackgroundColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39C7902BFD510B00DB5B33 /* BackgroundColorModifier.swift */; };
+		2C39C7932BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39C7922BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift */; };
+		2C39C7952BFD571B00DB5B33 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39C7942BFD571B00DB5B33 /* HorizontalScrollView.swift */; };
 		2C72CB082BF4038900E894B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C72CB072BF4038900E894B0 /* Images.xcassets */; };
 		2C9910572BF150D30025FDEE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2C9910562BF150D30025FDEE /* FirebaseAnalytics */; };
+		2CAC0C882BFBE859006CD646 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC0C872BFBE859006CD646 /* ScratchView.swift */; };
+		2CAC0C8A2BFC010D006CD646 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC0C892BFC010D006CD646 /* MainTabBarController.swift */; };
 		E7A9D19F2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9D19E2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift */; };
 		E7B066082BEEB1A600EBE919 /* Course_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */; };
 		E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066092BEEB1A600EBE919 /* ContentView.swift */; };
@@ -56,10 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C39C7902BFD510B00DB5B33 /* BackgroundColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorModifier.swift; sourceTree = "<group>"; };
+		2C39C7922BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionSwiftUICell.swift; sourceTree = "<group>"; };
+		2C39C7942BFD571B00DB5B33 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
 		2C72CB042BF4028D00E894B0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../../../Downloads/iOS_developer-main-2/Sources/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		2C72CB052BF4028D00E894B0 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../../../../../../Downloads/iOS_developer-main-2/Sources/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		2C72CB062BF4028D00E894B0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../../../Downloads/iOS_developer-main-2/Sources/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		2C72CB072BF4038900E894B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2CAC0C872BFBE859006CD646 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		2CAC0C892BFC010D006CD646 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E7A9D19E2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7B066042BEEB1A600EBE919 /* App Course Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Course Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_AppApp.swift; sourceTree = "<group>"; };
@@ -229,6 +242,8 @@
 				E7B5781A2BFA8CC8007AA9FC /* HomeViewSwiftUI.swift */,
 				E7B578252BFA9D3C007AA9FC /* SwipingView.swift */,
 				E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */,
+				2CAC0C872BFBE859006CD646 /* ScratchView.swift */,
+				2C39C7942BFD571B00DB5B33 /* HorizontalScrollView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -239,6 +254,7 @@
 				E7B0665B2BF012B800EBE919 /* UICollectionViewCell */,
 				E7B066542BF00B1200EBE919 /* HomeViewController.swift */,
 				E7B066552BF00B1200EBE919 /* HomeViewController.xib */,
+				2CAC0C892BFC010D006CD646 /* MainTabBarController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -257,6 +273,7 @@
 				E7B0665C2BF012E900EBE919 /* LabelCollectionViewCell.swift */,
 				E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */,
 				E7A9D19E2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift */,
+				2C39C7922BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift */,
 			);
 			path = UICollectionViewCell;
 			sourceTree = "<group>";
@@ -283,6 +300,7 @@
 		E7B5781D2BFA8FC2007AA9FC /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				2C39C7902BFD510B00DB5B33 /* BackgroundColorModifier.swift */,
 				E7B5781E2BFA8FDA007AA9FC /* BorderedModifier.swift */,
 				E7B578202BFA9014007AA9FC /* Image+ResizableBordered.swift */,
 			);
@@ -419,10 +437,13 @@
 				E7B066532BF0038800EBE919 /* Colors.xcassets in Resources */,
 				E7B066332BEEBE9100EBE919 /* Development.xcconfig in Resources */,
 				2C72CB082BF4038900E894B0 /* Images.xcassets in Resources */,
+				2C39C78D2BFD3E7400DB5B33 /* Poppins-Bold.ttf in Resources */,
 				E7B0664B2BEED65500EBE919 /* GoogleService-Info.plist in Resources */,
 				E7B066402BEEC97E00EBE919 /* Production.xcconfig in Resources */,
 				E7B066562BF00B1200EBE919 /* HomeViewController.xib in Resources */,
+				2C39C78E2BFD3E7800DB5B33 /* Poppins-MediumItalic.ttf in Resources */,
 				E7B0660F2BEEB1A800EBE919 /* Preview Assets.xcassets in Resources */,
+				2C39C78F2BFD3E7B00DB5B33 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,17 +470,22 @@
 			files = (
 				E7B578282BFAA6B1007AA9FC /* SwipingCard.swift in Sources */,
 				E7A9D19F2BF026CD0097CC24 /* HorizontalCollectionViewCell.swift in Sources */,
+				2CAC0C8A2BFC010D006CD646 /* MainTabBarController.swift in Sources */,
 				E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */,
 				E7B0663F2BEEC88A00EBE919 /* BuildConfiguration.swift in Sources */,
 				E7B578242BFA9048007AA9FC /* SelectableButtonStyle.swift in Sources */,
+				2CAC0C882BFBE859006CD646 /* ScratchView.swift in Sources */,
+				2C39C7932BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift in Sources */,
 				E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */,
 				E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */,
 				E7B066602BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift in Sources */,
+				2C39C7952BFD571B00DB5B33 /* HorizontalScrollView.swift in Sources */,
 				E7B0665A2BF011C000EBE919 /* MockDataProvider.swift in Sources */,
 				E7B578262BFA9D3C007AA9FC /* SwipingView.swift in Sources */,
 				E7B5781F2BFA8FDA007AA9FC /* BorderedModifier.swift in Sources */,
 				E7B0665D2BF012E900EBE919 /* LabelCollectionViewCell.swift in Sources */,
 				E7B5782A2BFAAD14007AA9FC /* DesignSystem.swift in Sources */,
+				2C39C7912BFD510B00DB5B33 /* BackgroundColorModifier.swift in Sources */,
 				E7B066642BF0199700EBE919 /* ImageCollectionViewCell.swift in Sources */,
 				E7B578212BFA9014007AA9FC /* Image+ResizableBordered.swift in Sources */,
 				E7B066082BEEB1A600EBE919 /* Course_AppApp.swift in Sources */,
@@ -729,7 +755,6 @@
 		E7B0662F2BEEBC2B00EBE919 /* Development - Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A3C6TC3D;
@@ -740,14 +765,13 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Course App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Course App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App Course Dev.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/App Course Dev";
 			};
 			name = "Development - Debug";
 		};
 		E7B066302BEEBC2B00EBE919 /* Development - Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A3C6TC3D;
@@ -758,7 +782,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Course App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Course App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App Course Dev.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/App Course Dev";
 			};
 			name = "Development - Release";
 		};
@@ -872,7 +896,6 @@
 		E7B066382BEEC37D00EBE919 /* Production - Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A3C6TC3D;
@@ -883,7 +906,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Course App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Course App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App Course Dev.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/App Course Dev";
 			};
 			name = "Production - Release";
 		};
@@ -1004,7 +1027,6 @@
 		E7B0663C2BEEC38800EBE919 /* Production - Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A3C6TC3D;
@@ -1015,7 +1037,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Course App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Course App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App Course Dev.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/App Course Dev";
 			};
 			name = "Production - Debug";
 		};

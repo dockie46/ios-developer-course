@@ -30,7 +30,7 @@ extension UIFont {
     }
 }
 extension Font {
-
+    
     static func regular(with size: FontSize) -> Font {
         Font.custom(FontType.regular.rawValue, size: size.rawValue)
     }
@@ -42,20 +42,43 @@ extension Font {
 enum TextType {
     case h1Title
     case h2Title
-
+    case navbarTitle
+    case normal
+    
     var font: Font {
         switch self {
+        case .navbarTitle:
+                .bold(with: .size28)
         case .h1Title:
                 .bold(with: .size36)
+        case .normal:
+                .regular(with: .size12)
         default:
                 .regular(with: .size20)
         }
     }
-
+    
+    var uiFont: UIFont {
+        switch self {
+        case .navbarTitle:
+                .bold(with: .size28)
+        case .h1Title:
+                .bold(with: .size36)
+        case .normal:
+                .regular(with: .size12)
+        default:
+                .regular(with: .size20)
+        }
+    }
+    
     var color: Color {
         switch self {
+        case .navbarTitle:
+                .white
         case .h1Title:
                 .white
+        case .normal:
+                .yellow
         default:
                 .gray
         }
@@ -68,7 +91,7 @@ struct TextTypeModifier: ViewModifier {
         content
             .font(textType.font)
             .foregroundColor(textType.color)
-
+        
     }
 }
 

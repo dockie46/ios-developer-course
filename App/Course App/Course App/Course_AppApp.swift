@@ -12,23 +12,14 @@ import SwiftUI
 struct Course_AppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     private let logger = Logger()
-    private let isUIKit = false
+    private let isUIKit = true
     var body: some Scene {
         WindowGroup {
-            homeView
-                .onAppear {
-                    logger.info("Content view has appeared")
-                }
-        }
-    }
-    
-    @ViewBuilder
-    var homeView: some View {
-        
-        if isUIKit {
-            HomeView()
-        } else {
-            SwipingView()
-        }
+                   MainTabView()
+                       .ignoresSafeArea(edges: .all)
+                       .onAppear {
+                           logger.info("Content view has appeared")
+                       }
+               }
     }
 }

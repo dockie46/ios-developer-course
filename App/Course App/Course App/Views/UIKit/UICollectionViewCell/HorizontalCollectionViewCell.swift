@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import SwiftUI
 
-class HorizontalScrollingCell: UICollectionViewCell, ReusableIdentifier {
+class HorizontalScrollingCell: UICollectionViewCell {
+    
     private let collectionView: UICollectionView!
     private var jokes: [Joke] = []
+    
     override init(frame: CGRect) {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -25,7 +28,7 @@ class HorizontalScrollingCell: UICollectionViewCell, ReusableIdentifier {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .clear
-        collectionView.register(ImageCollectionViewCell.self)
+        collectionView.register(UICollectionViewCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
         addSubview(collectionView)
@@ -47,8 +50,17 @@ extension HorizontalScrollingCell : UICollectionViewDataSource {
         return jokes.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ImageCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.imageView.image = jokes[indexPath.item].image
+//        let cell: ImageCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+//        cell.imageView.image = jokes[indexPath.item].image
+//        return cell
+        
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.contentConfiguration = UIHostingConfiguration {
+
+            Image(uiImage: jokes[indexPath.row].image ?? UIImage())
+                .resizableBordered(cornerRadius: 10)
+        }
+        
         return cell
     }
 }
@@ -67,3 +79,5 @@ extension HorizontalScrollingCell {
         collectionView.reloadData()
     }
 }
+
+extension UICollectionViewCell: ReusableIdentifier {}
