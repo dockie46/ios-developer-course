@@ -6,19 +6,18 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
+import UIKit
 
+// My testing purposes
 class HorizontalCollectionSwiftUICell: UICollectionViewCell {
-    
     private var hostController: UIHostingController<HorizontalScrollView>?
     
     override init(frame: CGRect) {
-            super.init(frame: frame)
+        super.init(frame: frame)
     }
     
     func configure(with data: [Joke]) {
-        
         let swiftUIView = HorizontalScrollView(data: data)
         hostController = UIHostingController(rootView: swiftUIView)
         
@@ -33,7 +32,7 @@ class HorizontalCollectionSwiftUICell: UICollectionViewCell {
             ])
         }
     }
-    
+    // swiftlint:disable:next unavailable_function
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

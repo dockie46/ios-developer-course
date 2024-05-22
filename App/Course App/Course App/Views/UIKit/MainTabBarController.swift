@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
+import UIKit
 
 struct MainTabView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> MainTabBarController {
@@ -18,27 +18,22 @@ struct MainTabView: UIViewControllerRepresentable {
 }
 
 final class MainTabBarController: UITabBarController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupGlobalTabBarUI()
-        //setupTabBar()
         setupTabBarControllers()
     }
 }
 
 // MARK: UI Setup
 private extension MainTabBarController {
-    
-    // TODO:
     func setupTabBar() {
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
     }
     
     func setupGlobalTabBarUI() {
-        
         UITabBar.appearance().backgroundColor = .brown
         UITabBar.appearance().tintColor = .red
         UITabBar.appearance().unselectedItemTintColor = .white
@@ -49,36 +44,27 @@ private extension MainTabBarController {
     }
     
     func setupCategoriesView() -> UIViewController {
-        UINavigationController().forTabBarItemViewPage(UIHostingController(rootView: HomeView()),
-                                                       title: "Categories",
-                                                       tabBarItemImageSystemName:"list.dash.header.rectangle",
-                                                       tag: 1)
+        UINavigationController().forTabBarItemViewPage(UIHostingController(rootView: HomeView()), title: "Categories", tabBarItemImageSystemName: "list.dash.header.rectangle", tag: 1)
     }
     
     func setupSwipingCardView() -> UIViewController {
-        UINavigationController().forTabBarItemViewPage(UIHostingController(rootView: SwipingView()),
-                                                       title: "Random",
-                                                       tabBarItemImageSystemName: "switch.2",
-                                                       tag: 1)
+        UINavigationController().forTabBarItemViewPage(UIHostingController(rootView: SwipingView()), title: "Random", tabBarItemImageSystemName: "switch.2", tag: 1)
     }
 }
 
 
 extension UINavigationController {
-    
     func forTabBarItemViewPage(_ rootViewController: UIViewController, title: String, tabBarItemImageSystemName: String, tag: Int) -> UIViewController {
-        
         let textType = TextType.navbarTitle
         
         rootViewController.navigationItem.title = title
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.tabBarItem = UITabBarItem(title: title, image: UIImage(systemName: tabBarItemImageSystemName), tag: tag)
-
+        
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .brown
-        appearance.titleTextAttributes = [.font: textType.uiFont,
-                                          .foregroundColor: UIColor(textType.color)]
+        appearance.titleTextAttributes = [.font: textType.uiFont, .foregroundColor: UIColor(textType.color)]
         
         navigationController.navigationBar.standardAppearance = appearance
         navigationController.navigationBar.compactAppearance = appearance

@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct HomeViewSwiftUI: View {
+    private enum UIConstant {
+        static let cornerRadius: CGFloat = 10
+        static let padding: CGFloat = 10
+    }
     @StateObject private var dataProvider = MockDataProvider()
     var body: some View {
-        // TODO: show case of printing redraw trigger
 #if DEBUG
         Self._printChanges()
 #endif
@@ -21,8 +24,9 @@ struct HomeViewSwiftUI: View {
                         ForEach(section.jokes) { joke in
                             ZStack(alignment: .bottomLeading) {
                                 Image(uiImage: joke.image ?? UIImage())
-                                    .resizableBordered(cornerRadius: 10)
+                                    .resizableBordered(cornerRadius: UIConstant.cornerRadius)
                                     .onTapGesture {
+                                        // swiftlint:disable:next disable_print
                                         print("Tapped joke \(joke)")
                                     }
                                 
@@ -31,13 +35,13 @@ struct HomeViewSwiftUI: View {
                         }
                     }
                     .background(.bg)
-                    .padding(.leading, 5)
-                    .padding(.trailing, 5)
+                    .padding(.leading, UIConstant.padding)
+                    .padding(.trailing, UIConstant.padding)
                 } header: {
                     Text(section.title)
                         .foregroundColor(.white)
-                        .padding(.leading, 5)
-                        .padding(.trailing, 5)
+                        .padding(.leading, UIConstant.padding)
+                        .padding(.trailing, UIConstant.padding)
                 }
                 .background(.bg)
                 .listRowInsets(EdgeInsets())
@@ -52,18 +56,16 @@ struct HomeViewSwiftUI: View {
         HStack {
             Text("Text")
                 .foregroundStyle(.white)
-            
             Spacer()
-            
             Button {
+                // swiftlint:disable:next disable_print
                 print("tapped button")
             } label: {
                 Image(systemName: "heart")
             }
             .buttonStyle(SelectableButtonStyle(isSelected: .constant(false), color: .gray))
-            
         }
-        .padding(5)
+        .padding(UIConstant.padding)
     }
 }
 

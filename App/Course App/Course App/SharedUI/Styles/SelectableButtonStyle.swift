@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SelectableButtonStyle: ButtonStyle {
-
     // MARK: UI constants
     private enum StyleConstant {
         static let padding: CGFloat = 10

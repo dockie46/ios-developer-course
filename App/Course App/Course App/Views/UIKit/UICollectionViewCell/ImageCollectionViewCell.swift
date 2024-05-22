@@ -9,11 +9,15 @@ import Foundation
 import UIKit
 
 final class ImageCollectionViewCell: UICollectionViewCell {
-
+    private enum UIConstant {
+        static let padding: CGFloat = 5
+        static let imageCornerRadius: CGFloat = 10
+    }
+    
     // MARK: UI items
     let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = UIConstant.imageCornerRadius
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -25,7 +29,8 @@ final class ImageCollectionViewCell: UICollectionViewCell {
 
         setupUI()
     }
-
+    
+    // swiftlint:disable:next unavailable_function
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -43,12 +48,11 @@ private extension ImageCollectionViewCell {
     }
 
     func setupConstraints() {
-        let anchorConstant: CGFloat = 5
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: anchorConstant),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: anchorConstant),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5)
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: UIConstant.padding),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: UIConstant.padding),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1 * UIConstant.padding),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -1 * UIConstant.padding)
         ])
     }
 }

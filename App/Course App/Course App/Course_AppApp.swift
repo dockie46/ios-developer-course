@@ -15,11 +15,11 @@ struct Course_AppApp: App {
     private let isUIKit = true
     var body: some Scene {
         WindowGroup {
-                   MainTabView()
-                       .ignoresSafeArea(edges: .all)
-                       .onAppear {
-                           logger.info("Content view has appeared")
-                       }
-               }
+            MainTabView()
+                .ignoresSafeArea(edges: .all)
+                .onAppear {
+                    logger.info("Content view has appeared")
+                }
+        }
     }
 }

@@ -9,15 +9,19 @@ import Foundation
 import UIKit
 
 final class LabelCollectionViewCell: UICollectionViewCell {
+    private enum UIConstant {
+        static let padding: CGFloat = 5
+    }
+    
     lazy var nameLabel = UILabel()
 
     // MARK: Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         setupUI()
     }
-
+    
+    // swiftlint:disable:next unavailable_function
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -42,10 +46,10 @@ private extension LabelCollectionViewCell {
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: UIConstant.padding),
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: UIConstant.padding),
+            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1 * UIConstant.padding),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -1 * UIConstant.padding),
         ])
     }
 }

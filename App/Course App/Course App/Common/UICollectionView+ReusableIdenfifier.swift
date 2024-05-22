@@ -34,7 +34,6 @@ extension UICollectionView {
             ofKind: ofKind,
             withReuseIdentifier: T.identifier,
             for: indexPath) as? T else {
-
             fatalError("SupplementaryView with identifier: \(T.identifier) could not be dequeued!")
         }
 

@@ -13,7 +13,9 @@ struct Line {
 }
 
 struct ScratchView: View {
-
+    private enum UIConstant {
+        static let radius: CGFloat = 10
+    }
     // MARK: Variables
     let image: Image
     let text: String
@@ -24,10 +26,10 @@ struct ScratchView: View {
     var body: some View {
         ZStack(alignment: .top) {
             image
-                .resizableBordered(cornerRadius: 10)
+                .resizableBordered(cornerRadius: UIConstant.radius)
                 .scaledToFit()
 
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: UIConstant.radius)
                 .fill(.bg)
                 .overlay {
                     Text(text)
@@ -40,12 +42,7 @@ struct ScratchView: View {
                         for line in lines {
                             var path = Path()
                             path.addLines(line.points)
-                            context.stroke(path,
-                                           with: .color(.white),
-                                           style: StrokeStyle(lineWidth: line.lineWidth,
-                                                              lineCap: .round,
-                                                              lineJoin: .round)
-                            )
+                            context.stroke(path, with: .color(.white), style: StrokeStyle(lineWidth: line.lineWidth, lineCap: .round, lineJoin: .round))
                         }
                     }
                 )

@@ -7,10 +7,10 @@
 
 import SwiftUI
 extension Image {
-    func resizableBordered(cornerRadius: CGFloat) -> some View {
+    func resizableBordered(cornerRadius: CGFloat, color: Color = .white) -> some View {
         self
             .resizable()
-            .scaledToFill()
-            .bordered(cornerRadius: cornerRadius)
+            .scaledToFit()
+            .bordered(cornerRadius: cornerRadius, color: color)
     }
 }

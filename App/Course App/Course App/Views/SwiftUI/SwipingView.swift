@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct SwipingView: View {
+    private enum UIConstant {
+        static let paddingHeight: CGFloat = 20
+        static let frameDimensionDivider: CGFloat = 1.2
+        static let frameDimensionMultiplier: CGFloat = 1.5
+    }
     private let dataProvider = MockDataProvider()
     
     var body: some View {
@@ -15,7 +20,6 @@ struct SwipingView: View {
             HStack {
                 Spacer()
                 VStack {
-                    
                     if let jokes = dataProvider.data.first?.jokes {
                         ZStack {
                             ForEach(jokes, id: \.self) { joke in
@@ -26,13 +30,14 @@ struct SwipingView: View {
                                         description: joke.text
                                     ),
                                     swipeStateAction: { action in
+                                        // swiftlint:disable:next disable_print
                                         print("swipe action \(action)")
                                     }
                                 )
                             }
                         }
-                        .padding(.top, geometry.size.height / 20)
-                        .frame(width: geometry.size.width / 1.2, height: (geometry.size.width / 1.2) * 1.5)
+                        .padding(.top, geometry.size.height / UIConstant.paddingHeight)
+                        .frame(width: geometry.size.width / UIConstant.frameDimensionDivider, height: (geometry.size.width / UIConstant.frameDimensionDivider) * UIConstant.frameDimensionMultiplier)
                     } else {
                         Text("Empty data!")
                     }

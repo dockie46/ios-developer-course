@@ -4,20 +4,25 @@
 //
 //  Created by Work on 22.05.2024.
 //
-
+import os
 import SwiftUI
 
 struct HorizontalScrollView: View {
-    
+    private enum UIConstant {
+        static let radius: CGFloat = 10
+    }
+
+    let logger = Logger()
     let data: [Joke]
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
                 ForEach(data) { joke in
                     Image(uiImage: joke.image ?? UIImage())
-                        .resizableBordered(cornerRadius: 10)
+                        .resizableBordered(cornerRadius: UIConstant.radius)
                         .onTapGesture {
-                            print("Tapped joke \(joke)")
+                            logger.log("Tap on cell")
                         }
                 }
             }
