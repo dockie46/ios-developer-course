@@ -12,10 +12,11 @@ import SwiftUI
 struct Course_AppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     private let logger = Logger()
-    private let isUIKit = true
+    private let tabBarCoordinator = MainTabBarCoordinator()
+    
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            CoordinatorView(coordinator: tabBarCoordinator)
                 .ignoresSafeArea(edges: .all)
                 .onAppear {
                     logger.info("Content view has appeared")
