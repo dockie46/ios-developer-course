@@ -12,15 +12,12 @@ import UIKit
 // My testing purposes
 class HorizontalCollectionSwiftUICell: UICollectionViewCell {
     private var hostController: UIHostingController<HorizontalScrollView>?
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
     func configure(with data: [Joke]) {
         let swiftUIView = HorizontalScrollView(data: data)
         hostController = UIHostingController(rootView: swiftUIView)
-        
         if let view = hostController?.view {
             view.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview(view)

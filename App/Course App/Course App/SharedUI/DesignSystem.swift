@@ -39,7 +39,6 @@ enum TextType {
             .regular(with: .size20)
         }
     }
-    
     var color: Color {
         switch self {
         case .navbarTitle:

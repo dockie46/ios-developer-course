@@ -19,13 +19,36 @@ extension MainTabBarCoordinator {
     func start() {
         tabBarController.viewControllers = [
             setupCategoriesView(),
-            setupSwipingCardView()
+            setupSwipingCardView(),
+            setupProfileView()
         ]
+    }
+    func handleDeeplink(deeplink: DeepLink) {
+        switch deeplink {
+        case let .onboarding(page):
+            let coordinator = makeOnboardingFlow(page: page)
+            startChildCoordinator(coordinator)
+            tabBarController.present(coordinator.rootViewController, animated: true)
+        case let .news:
+            let coordinator = makeNewsFlow()
+            startChildCoordinator(coordinator)
+            tabBarController.present(coordinator.rootViewController, animated: true)
+        default:
+            break
+        }
     }
 }
 
 // MARK: Factory methods
 private extension MainTabBarCoordinator {
+    func makeOnboardingFlow(page: Int) -> ViewControllerCoordinator {
+        let coordinator = OnboardingNavigationCoordinator(initialPage: page)
+        return coordinator
+    }
+    func makeNewsFlow() -> ViewControllerCoordinator {
+        let coordinator = NewsNavigationCoordinator()
+        return coordinator
+    }
     func makeTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
         tabBarController.delegate = self
@@ -33,19 +56,27 @@ private extension MainTabBarCoordinator {
     }
 
     func setupCategoriesView() -> UIViewController {
-        let categoriesNavigationController = UINavigationController(rootViewController: HomeViewController())
-        categoriesNavigationController.tabBarItem = UITabBarItem(
+        let categoriesCoordinator = CategoriesNavigationCoordinator()
+        startChildCoordinator(categoriesCoordinator)
+        categoriesCoordinator.rootViewController.tabBarItem = UITabBarItem(
             title: "Categories",
             image: UIImage(systemName: "list.dash.header.rectangle"),
             tag: 0
         )
-        return categoriesNavigationController
+        return categoriesCoordinator.rootViewController
     }
 
     func setupSwipingCardView() -> UIViewController {
-        let swipingNavigationController = UINavigationController(rootViewController: UIHostingController(rootView: SwipingView()))
-        swipingNavigationController.tabBarItem = UITabBarItem(title: "Random", image: UIImage(systemName: "switch.2"), tag: 1)
-        return swipingNavigationController
+        let swippingCoordinator = SwipingNavigationCoordinator()
+        startChildCoordinator(swippingCoordinator)
+        swippingCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Random", image: UIImage(systemName: "switch.2"), tag: 1)
+        return swippingCoordinator.rootViewController
+    }
+    func setupProfileView() -> UIViewController {
+        let profileCoordinator = ProfileNavigationCoordinator()
+        startChildCoordinator(profileCoordinator)
+        profileCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
+        return profileCoordinator.rootViewController
     }
 }
 
@@ -53,7 +84,27 @@ extension MainTabBarCoordinator: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
 
         if viewController === tabBarController.viewControllers?.last {
-//            rootViewController.showInfoAlert(title: "Ups something is wrong...")
+//           rootViewController.showInfoAlert(title: "Ups something is wrong...")
         }
+    }
+}
+
+extension UIViewController {
+    func showInfoAlert(title: String, message: String? = nil, handler: (() -> Void)? = nil) {
+        guard presentedViewController == nil else {
+            return
+        }
+
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        let okAction = UIAlertAction(
+            title: "OK",
+            style: .default
+        ) { _ in
+            handler?()
+        }
+        alertController.addAction(okAction)
+
+        present(alertController, animated: true)
     }
 }

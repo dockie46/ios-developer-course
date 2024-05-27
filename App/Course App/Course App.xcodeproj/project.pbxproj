@@ -21,6 +21,18 @@
 		E720DD902BFDD79A0055F990 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8D2BFDD79A0055F990 /* Poppins-MediumItalic.ttf */; };
 		E720DD912BFDD79A0055F990 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8E2BFDD79A0055F990 /* Poppins-Bold.ttf */; };
 		E720DD922BFDD79A0055F990 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8F2BFDD79A0055F990 /* Poppins-Regular.ttf */; };
+		E764B3AA2C04C4670048E61D /* CategoriesNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3A92C04C4670048E61D /* CategoriesNavigationCoordinator.swift */; };
+		E764B3AD2C04C93B0048E61D /* OnboardingViewSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3AC2C04C93B0048E61D /* OnboardingViewSecond.swift */; };
+		E764B3B02C04C9570048E61D /* OnboardingViewLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3AF2C04C9570048E61D /* OnboardingViewLast.swift */; };
+		E764B3B22C04CC6D0048E61D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B12C04CC6D0048E61D /* ProfileView.swift */; };
+		E764B3B42C04CE110048E61D /* ProfileNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B32C04CE110048E61D /* ProfileNavigationCoordinator.swift */; };
+		E764B3B82C0516D30048E61D /* NewsNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B72C0516D30048E61D /* NewsNavigationCoordinator.swift */; };
+		E764B3BA2C0517600048E61D /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B92C0517600048E61D /* NewsView.swift */; };
+		E79DEFCF2C03C2D500AA350B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFCE2C03C2D500AA350B /* CustomNavigationController.swift */; };
+		E79DEFD12C03CAEC00AA350B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD02C03CAEC00AA350B /* AppCoordinator.swift */; };
+		E79DEFD32C03D93600AA350B /* OnboardingViewStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD22C03D93600AA350B /* OnboardingViewStart.swift */; };
+		E79DEFD52C03D98C00AA350B /* OnboardingNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD42C03D98C00AA350B /* OnboardingNavigationCoordinator.swift */; };
+		E79DEFD72C03D9A800AA350B /* SwipingNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD62C03D9A800AA350B /* SwipingNavigationCoordinator.swift */; };
 		E7A9D19F2BF026CD0097CC24 /* HorizontalScrollingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9D19E2BF026CD0097CC24 /* HorizontalScrollingCell.swift */; };
 		E7B066082BEEB1A600EBE919 /* Course_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */; };
 		E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066092BEEB1A600EBE919 /* ContentView.swift */; };
@@ -81,6 +93,18 @@
 		E720DD8D2BFDD79A0055F990 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		E720DD8E2BFDD79A0055F990 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		E720DD8F2BFDD79A0055F990 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		E764B3A92C04C4670048E61D /* CategoriesNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNavigationCoordinator.swift; sourceTree = "<group>"; };
+		E764B3AC2C04C93B0048E61D /* OnboardingViewSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewSecond.swift; sourceTree = "<group>"; };
+		E764B3AF2C04C9570048E61D /* OnboardingViewLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewLast.swift; sourceTree = "<group>"; };
+		E764B3B12C04CC6D0048E61D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E764B3B32C04CE110048E61D /* ProfileNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationCoordinator.swift; sourceTree = "<group>"; };
+		E764B3B72C0516D30048E61D /* NewsNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNavigationCoordinator.swift; sourceTree = "<group>"; };
+		E764B3B92C0517600048E61D /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		E79DEFCE2C03C2D500AA350B /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		E79DEFD02C03CAEC00AA350B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		E79DEFD22C03D93600AA350B /* OnboardingViewStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewStart.swift; sourceTree = "<group>"; };
+		E79DEFD42C03D98C00AA350B /* OnboardingNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationCoordinator.swift; sourceTree = "<group>"; };
+		E79DEFD62C03D9A800AA350B /* SwipingNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingNavigationCoordinator.swift; sourceTree = "<group>"; };
 		E7A9D19E2BF026CD0097CC24 /* HorizontalScrollingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollingCell.swift; sourceTree = "<group>"; };
 		E7B066042BEEB1A600EBE919 /* App Course Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Course Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B066072BEEB1A600EBE919 /* Course_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_AppApp.swift; sourceTree = "<group>"; };
@@ -143,12 +167,44 @@
 		2CC8B9F62C0288AC007CDEAF /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				E764B3B62C0511820048E61D /* DeepLinks */,
+				E764B3B52C0511650048E61D /* Tabs */,
 				2CC8B9F72C028967007CDEAF /* Coordinator.swift */,
 				2CC8B9F92C028B4C007CDEAF /* ViewControllerCoordinator.swift */,
 				2CC8B9FB2C028C5F007CDEAF /* MainTabBarCoordinator.swift */,
 				2CC8B9FD2C028F8E007CDEAF /* CoordinatorView.swift */,
+				E79DEFD02C03CAEC00AA350B /* AppCoordinator.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		E764B3AB2C04C7F20048E61D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E79DEFD22C03D93600AA350B /* OnboardingViewStart.swift */,
+				E764B3AC2C04C93B0048E61D /* OnboardingViewSecond.swift */,
+				E764B3AF2C04C9570048E61D /* OnboardingViewLast.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E764B3B52C0511650048E61D /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				E79DEFD62C03D9A800AA350B /* SwipingNavigationCoordinator.swift */,
+				E764B3A92C04C4670048E61D /* CategoriesNavigationCoordinator.swift */,
+				E764B3B32C04CE110048E61D /* ProfileNavigationCoordinator.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		E764B3B62C0511820048E61D /* DeepLinks */ = {
+			isa = PBXGroup;
+			children = (
+				E79DEFD42C03D98C00AA350B /* OnboardingNavigationCoordinator.swift */,
+				E764B3B72C0516D30048E61D /* NewsNavigationCoordinator.swift */,
+			);
+			path = DeepLinks;
 			sourceTree = "<group>";
 		};
 		E7B065FB2BEEB1A600EBE919 = {
@@ -258,12 +314,15 @@
 		E7B066502BF0028300EBE919 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E764B3AB2C04C7F20048E61D /* Onboarding */,
 				E7B066092BEEB1A600EBE919 /* ContentView.swift */,
 				E7B5781A2BFA8CC8007AA9FC /* HomeViewSwiftUI.swift */,
 				E7B578252BFA9D3C007AA9FC /* SwipingView.swift */,
 				E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */,
 				2CAC0C872BFBE859006CD646 /* ScratchView.swift */,
 				2C39C7942BFD571B00DB5B33 /* HorizontalScrollView.swift */,
+				E764B3B12C04CC6D0048E61D /* ProfileView.swift */,
+				E764B3B92C0517600048E61D /* NewsView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -275,6 +334,7 @@
 				E7B066542BF00B1200EBE919 /* HomeViewController.swift */,
 				E7B066552BF00B1200EBE919 /* HomeViewController.xib */,
 				2CAC0C892BFC010D006CD646 /* MainTabBarController.swift */,
+				E79DEFCE2C03C2D500AA350B /* CustomNavigationController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -356,7 +416,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E715EEDB2BFE7900006AA159 /* PBXTargetDependency */,
+				E79DEFCD2C03C0F900AA350B /* PBXTargetDependency */,
 			);
 			name = "Course App";
 			packageProductDependencies = (
@@ -437,6 +497,7 @@
 			mainGroup = E7B065FB2BEEB1A600EBE919;
 			packageReferences = (
 				2C9910552BF150B60025FDEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E79DEFCB2C03BFFA00AA350B /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = E7B066052BEEB1A600EBE919 /* Products */;
 			projectDirPath = "";
@@ -490,31 +551,43 @@
 			files = (
 				E7B578282BFAA6B1007AA9FC /* SwipingCard.swift in Sources */,
 				2CC8B9FE2C028F8E007CDEAF /* CoordinatorView.swift in Sources */,
+				E764B3B22C04CC6D0048E61D /* ProfileView.swift in Sources */,
 				E7A9D19F2BF026CD0097CC24 /* HorizontalScrollingCell.swift in Sources */,
+				E79DEFD32C03D93600AA350B /* OnboardingViewStart.swift in Sources */,
 				2CAC0C8A2BFC010D006CD646 /* MainTabBarController.swift in Sources */,
 				E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */,
 				E7B0663F2BEEC88A00EBE919 /* BuildConfiguration.swift in Sources */,
 				2CC8B9FA2C028B4C007CDEAF /* ViewControllerCoordinator.swift in Sources */,
+				E764B3AA2C04C4670048E61D /* CategoriesNavigationCoordinator.swift in Sources */,
 				E7B578242BFA9048007AA9FC /* SelectableButtonStyle.swift in Sources */,
+				E79DEFD12C03CAEC00AA350B /* AppCoordinator.swift in Sources */,
 				2CAC0C882BFBE859006CD646 /* ScratchView.swift in Sources */,
 				2C39C7932BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift in Sources */,
 				2CC8B9F82C028967007CDEAF /* Coordinator.swift in Sources */,
+				E764B3B82C0516D30048E61D /* NewsNavigationCoordinator.swift in Sources */,
 				E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */,
 				2CC8B9FC2C028C5F007CDEAF /* MainTabBarCoordinator.swift in Sources */,
 				E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */,
+				E764B3B02C04C9570048E61D /* OnboardingViewLast.swift in Sources */,
 				E7B066602BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift in Sources */,
 				2C39C7952BFD571B00DB5B33 /* HorizontalScrollView.swift in Sources */,
 				E7B0665A2BF011C000EBE919 /* MockDataProvider.swift in Sources */,
 				E7B578262BFA9D3C007AA9FC /* SwipingView.swift in Sources */,
 				E7B5781F2BFA8FDA007AA9FC /* BorderedModifier.swift in Sources */,
 				E7B0665D2BF012E900EBE919 /* LabelCollectionViewCell.swift in Sources */,
+				E79DEFCF2C03C2D500AA350B /* CustomNavigationController.swift in Sources */,
 				E7B5782A2BFAAD14007AA9FC /* DesignSystem.swift in Sources */,
 				2C39C7912BFD510B00DB5B33 /* BackgroundColorModifier.swift in Sources */,
 				E7B066642BF0199700EBE919 /* ImageCollectionViewCell.swift in Sources */,
+				E764B3AD2C04C93B0048E61D /* OnboardingViewSecond.swift in Sources */,
+				E79DEFD72C03D9A800AA350B /* SwipingNavigationCoordinator.swift in Sources */,
 				E7B578212BFA9014007AA9FC /* Image+ResizableBordered.swift in Sources */,
+				E764B3BA2C0517600048E61D /* NewsView.swift in Sources */,
 				E7B066082BEEB1A600EBE919 /* Course_AppApp.swift in Sources */,
+				E764B3B42C04CE110048E61D /* ProfileNavigationCoordinator.swift in Sources */,
 				E7B066572BF00B1200EBE919 /* HomeViewController.swift in Sources */,
 				E7B5781B2BFA8CC8007AA9FC /* HomeViewSwiftUI.swift in Sources */,
+				E79DEFD52C03D98C00AA350B /* OnboardingNavigationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,9 +615,9 @@
 			isa = PBXTargetDependency;
 			productRef = 2CC8B9F42C02798B007CDEAF /* SwiftLintPlugin */;
 		};
-		E715EEDB2BFE7900006AA159 /* PBXTargetDependency */ = {
+		E79DEFCD2C03C0F900AA350B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = E715EEDA2BFE7900006AA159 /* SwiftLintPlugin */;
+			productRef = E79DEFCC2C03C0F900AA350B /* SwiftLintBuildToolPlugin */;
 		};
 		E7B066202BEEBACB00EBE919 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1127,6 +1200,14 @@
 				minimumVersion = 10.25.0;
 			};
 		};
+		E79DEFCB2C03BFFA00AA350B /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.55.1;
+			};
+		};
 		E7B066412BEECE1E00EBE919 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/SwiftLint.git";
@@ -1148,10 +1229,10 @@
 			package = E7B066412BEECE1E00EBE919 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
 		};
-		E715EEDA2BFE7900006AA159 /* SwiftLintPlugin */ = {
+		E79DEFCC2C03C0F900AA350B /* SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E7B066412BEECE1E00EBE919 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = "plugin:SwiftLintPlugin";
+			package = E79DEFCB2C03BFFA00AA350B /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

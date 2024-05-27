@@ -47,6 +47,7 @@ struct SwipingView: View {
             }
         }
         .defaultBackgroundColor()
+        .navigationTitle("Random jokes")
     }
 }
 

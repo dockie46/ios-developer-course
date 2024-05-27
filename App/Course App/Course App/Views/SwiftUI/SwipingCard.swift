@@ -13,7 +13,6 @@ struct SwipingCard: View {
         static let cardRadius: CGFloat = 15
         static let cardHeightOffset: CGFloat = 0.5
         static let cardRotationEffect: CGFloat = 40
-        
         static let colorOpacity: CGFloat = 0.7
         static let cardDescriptionPadding: CGFloat = 10
         static let cardDescriptionColorOpacity: CGFloat = 0.5
@@ -25,32 +24,28 @@ struct SwipingCard: View {
         static let swipeColoredOpacity: CGFloat = 0.6
         static let swipeIntervalMinToReact: CGFloat = 60
     }
-    
     enum SwipeDirection {
         case left
         case right
     }
-    
     // MARK: - SwipeState
     enum SwipeState {
         case swiping(direction: SwipeDirection)
         case finished(direction: SwipeDirection)
         case cancelled
     }
-    
     // MARK: - Configuration
     struct Configuration: Equatable {
         let image: Image
         let title: String
         let description: String
     }
-    
+
     // MARK: Private variables
     private let swipingAction: Action<SwipeState>
     private let configuration: Configuration
     @State private var offset: CGSize = .zero
     @State private var color: Color = .bg.opacity(UIConstant.colorOpacity)
-    
     init(
         configuration: Configuration,
         swipeStateAction: @escaping (Action<SwipeState>)
