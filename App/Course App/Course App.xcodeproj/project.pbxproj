@@ -11,6 +11,7 @@
 		2C39C7932BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39C7922BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift */; };
 		2C39C7952BFD571B00DB5B33 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39C7942BFD571B00DB5B33 /* HorizontalScrollView.swift */; };
 		2C72CB082BF4038900E894B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C72CB072BF4038900E894B0 /* Images.xcassets */; };
+		2C81DA8F2C052839001A9BDB /* EventEmitting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81DA8E2C052839001A9BDB /* EventEmitting.swift */; };
 		2C9910572BF150D30025FDEE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2C9910562BF150D30025FDEE /* FirebaseAnalytics */; };
 		2CAC0C882BFBE859006CD646 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC0C872BFBE859006CD646 /* ScratchView.swift */; };
 		2CAC0C8A2BFC010D006CD646 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC0C892BFC010D006CD646 /* MainTabBarController.swift */; };
@@ -84,6 +85,7 @@
 		2C39C7922BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionSwiftUICell.swift; sourceTree = "<group>"; };
 		2C39C7942BFD571B00DB5B33 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
 		2C72CB072BF4038900E894B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C81DA8E2C052839001A9BDB /* EventEmitting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitting.swift; sourceTree = "<group>"; };
 		2CAC0C872BFBE859006CD646 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
 		2CAC0C892BFC010D006CD646 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2CC8B9F72C028967007CDEAF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			children = (
 				E7B0665F2BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift */,
 				E7B066612BF0159D00EBE919 /* ReusableIdentifier.swift */,
+				2C81DA8E2C052839001A9BDB /* EventEmitting.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -497,7 +500,6 @@
 			mainGroup = E7B065FB2BEEB1A600EBE919;
 			packageReferences = (
 				2C9910552BF150B60025FDEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				E79DEFCB2C03BFFA00AA350B /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = E7B066052BEEB1A600EBE919 /* Products */;
 			projectDirPath = "";
@@ -574,6 +576,7 @@
 				E7B0665A2BF011C000EBE919 /* MockDataProvider.swift in Sources */,
 				E7B578262BFA9D3C007AA9FC /* SwipingView.swift in Sources */,
 				E7B5781F2BFA8FDA007AA9FC /* BorderedModifier.swift in Sources */,
+				2C81DA8F2C052839001A9BDB /* EventEmitting.swift in Sources */,
 				E7B0665D2BF012E900EBE919 /* LabelCollectionViewCell.swift in Sources */,
 				E79DEFCF2C03C2D500AA350B /* CustomNavigationController.swift in Sources */,
 				E7B5782A2BFAAD14007AA9FC /* DesignSystem.swift in Sources */,

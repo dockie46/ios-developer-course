@@ -19,18 +19,24 @@ final class NewsNavigationCoordinator: NSObject, NewsCoordinating {
     
     private(set) lazy var navigationController: UINavigationController = makeNavigationController()
     private var cancellables = Set<AnyCancellable>()
+    private let eventSubject = PassthroughSubject<OnboardingNavigationCoordinatorEvent, Never>()
     var childCoordinators: [any Coordinator] = []
 }
-
+// MARK: - EventEmitting
+extension NewsNavigationCoordinator: EventEmitting {
+    var eventPublisher: AnyPublisher<OnboardingNavigationCoordinatorEvent, Never> {
+        eventSubject.eraseToAnyPublisher()
+    }
+}
 extension NewsNavigationCoordinator {
     func makeNavigationController() -> UINavigationController {
         let navigationController = CustomNavigationController()
-        //        navigationController.eventPublisher.sink { [weak self] value in
-        //            guard let self else {
-        //                return
-        //            }
-        //            self.eventSubject.send(.dismiss(self))
-        //        }
+        navigationController.eventPublisher.sink { [weak self] value in
+            guard let self else {
+                return
+            }
+            self.eventSubject.send(.dismiss(self))
+        }
         return navigationController
     }
     func start() {

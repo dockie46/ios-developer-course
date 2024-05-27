@@ -4,14 +4,18 @@
 //
 //  Created by Work on 25.05.2024.
 //
-
+import Combine
 import Foundation
 import UIKit
 import SwiftUI
 
 final class MainTabBarCoordinator: NSObject, TabBarControllerCoordinator {
     var childCoordinators = [Coordinator]()
-    private(set) lazy var tabBarController = makeTabBarController()
+    private(set) lazy var tabBarController = makeTabBarController()   
+    private lazy var cancellables = Set<AnyCancellable>()
+    deinit {
+        print("MainTabBarCoordinator")
+    }
 }
 
 // MARK: - Start coordinator
@@ -29,7 +33,7 @@ extension MainTabBarCoordinator {
             let coordinator = makeOnboardingFlow(page: page)
             startChildCoordinator(coordinator)
             tabBarController.present(coordinator.rootViewController, animated: true)
-        case let .news:
+        case .news:
             let coordinator = makeNewsFlow()
             startChildCoordinator(coordinator)
             tabBarController.present(coordinator.rootViewController, animated: true)
@@ -43,10 +47,20 @@ extension MainTabBarCoordinator {
 private extension MainTabBarCoordinator {
     func makeOnboardingFlow(page: Int) -> ViewControllerCoordinator {
         let coordinator = OnboardingNavigationCoordinator(initialPage: page)
+        coordinator.eventPublisher
+            .sink { [weak self] event in
+                self?.handle(event: event)
+            }
+            .store(in: &cancellables)
         return coordinator
     }
     func makeNewsFlow() -> ViewControllerCoordinator {
         let coordinator = NewsNavigationCoordinator()
+        coordinator.eventPublisher
+            .sink { [weak self] event in
+                self?.handle(event: event)
+            }
+            .store(in: &cancellables)
         return coordinator
     }
     func makeTabBarController() -> UITabBarController {
@@ -77,6 +91,16 @@ private extension MainTabBarCoordinator {
         startChildCoordinator(profileCoordinator)
         profileCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
         return profileCoordinator.rootViewController
+    }
+}
+
+// MARK: - Handling events
+private extension MainTabBarCoordinator {
+    func handle(event: OnboardingNavigationCoordinatorEvent) {
+        switch event {
+        case let .dismiss( coordinator):
+            release(coordinator: coordinator)
+        }
     }
 }
 

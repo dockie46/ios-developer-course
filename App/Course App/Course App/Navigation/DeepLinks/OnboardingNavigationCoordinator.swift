@@ -10,6 +10,10 @@ import Combine
 import UIKit
 import SwiftUI
 
+enum OnboardingNavigationCoordinatorEvent {
+    case dismiss(Coordinator)
+}
+
 protocol OnboardingCoordinating: NavigationControllerCoordinator {}
 
 final class OnboardingNavigationCoordinator: NSObject, OnboardingCoordinating {
@@ -19,6 +23,7 @@ final class OnboardingNavigationCoordinator: NSObject, OnboardingCoordinating {
     
     private(set) lazy var navigationController: UINavigationController = makeNavigationController()
     private var cancellables = Set<AnyCancellable>()
+    private let eventSubject = PassthroughSubject<OnboardingNavigationCoordinatorEvent, Never>()
     private let initialPage: Int
     var childCoordinators: [any Coordinator] = []
     
@@ -30,12 +35,18 @@ final class OnboardingNavigationCoordinator: NSObject, OnboardingCoordinating {
 extension OnboardingNavigationCoordinator {
     func makeNavigationController() -> UINavigationController {
         let navigationController = CustomNavigationController()
-        //        navigationController.eventPublisher.sink { [weak self] value in
-        //            guard let self else {
-        //                return
-        //            }
-        //            self.eventSubject.send(.dismiss(self))
-        //        }
+        navigationController.eventPublisher.sink { [weak self] event in
+            guard let self else {
+                return
+            }
+            switch event {
+            case .dismiss:
+                self.eventSubject.send(.dismiss(self))
+            default:
+                break
+            }
+        }
+        .store(in: &cancellables)
         return navigationController
     }
     func start() {
@@ -43,7 +54,12 @@ extension OnboardingNavigationCoordinator {
         navigationController.setViewControllers([nextOnboardingPageViewController], animated: false)
     }
 }
-
+// MARK: - EventEmitting
+extension OnboardingNavigationCoordinator: EventEmitting {
+    var eventPublisher: AnyPublisher<OnboardingNavigationCoordinatorEvent, Never> {
+        eventSubject.eraseToAnyPublisher()
+    }
+}
 extension OnboardingCoordinating {
     func navigateToOnboardingView(page: Int) {
         guard let controller = nextOnboardingViewController(page: page) else { return }
