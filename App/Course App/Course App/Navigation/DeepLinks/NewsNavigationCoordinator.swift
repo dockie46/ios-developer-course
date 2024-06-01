@@ -31,7 +31,7 @@ extension NewsNavigationCoordinator: EventEmitting {
 extension NewsNavigationCoordinator {
     func makeNavigationController() -> UINavigationController {
         let navigationController = CustomNavigationController()
-        navigationController.eventPublisher.sink { [weak self] value in
+        navigationController.eventPublisher.sink { [weak self] _ in
             guard let self else {
                 return
             }

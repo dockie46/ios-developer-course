@@ -30,7 +30,7 @@ extension MainTabBarCoordinator {
     func handleDeeplink(deeplink: DeepLink) {
         switch deeplink {
         case let .onboarding(page):
-            let coordinator = makeOnboardingFlow(page: page)
+            let coordinator = makeOnboardingFlow(pageIndex: page)
             startChildCoordinator(coordinator)
             tabBarController.present(coordinator.rootViewController, animated: true)
         case .news:
@@ -45,8 +45,8 @@ extension MainTabBarCoordinator {
 
 // MARK: Factory methods
 private extension MainTabBarCoordinator {
-    func makeOnboardingFlow(page: Int) -> ViewControllerCoordinator {
-        let coordinator = OnboardingNavigationCoordinator(initialPage: page)
+    func makeOnboardingFlow(pageIndex: Int) -> ViewControllerCoordinator {
+        let coordinator = OnboardingNavigationCoordinator(pageIndex: pageIndex)
         coordinator.eventPublisher
             .sink { [weak self] event in
                 self?.handle(event: event)

@@ -23,15 +23,13 @@
 		E720DD912BFDD79A0055F990 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8E2BFDD79A0055F990 /* Poppins-Bold.ttf */; };
 		E720DD922BFDD79A0055F990 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8F2BFDD79A0055F990 /* Poppins-Regular.ttf */; };
 		E764B3AA2C04C4670048E61D /* CategoriesNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3A92C04C4670048E61D /* CategoriesNavigationCoordinator.swift */; };
-		E764B3AD2C04C93B0048E61D /* OnboardingViewSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3AC2C04C93B0048E61D /* OnboardingViewSecond.swift */; };
-		E764B3B02C04C9570048E61D /* OnboardingViewLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3AF2C04C9570048E61D /* OnboardingViewLast.swift */; };
 		E764B3B22C04CC6D0048E61D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B12C04CC6D0048E61D /* ProfileView.swift */; };
 		E764B3B42C04CE110048E61D /* ProfileNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B32C04CE110048E61D /* ProfileNavigationCoordinator.swift */; };
 		E764B3B82C0516D30048E61D /* NewsNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B72C0516D30048E61D /* NewsNavigationCoordinator.swift */; };
 		E764B3BA2C0517600048E61D /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B92C0517600048E61D /* NewsView.swift */; };
 		E79DEFCF2C03C2D500AA350B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFCE2C03C2D500AA350B /* CustomNavigationController.swift */; };
 		E79DEFD12C03CAEC00AA350B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD02C03CAEC00AA350B /* AppCoordinator.swift */; };
-		E79DEFD32C03D93600AA350B /* OnboardingViewStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD22C03D93600AA350B /* OnboardingViewStart.swift */; };
+		E79DEFD32C03D93600AA350B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD22C03D93600AA350B /* OnboardingView.swift */; };
 		E79DEFD52C03D98C00AA350B /* OnboardingNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD42C03D98C00AA350B /* OnboardingNavigationCoordinator.swift */; };
 		E79DEFD72C03D9A800AA350B /* SwipingNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD62C03D9A800AA350B /* SwipingNavigationCoordinator.swift */; };
 		E7A9D19F2BF026CD0097CC24 /* HorizontalScrollingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9D19E2BF026CD0097CC24 /* HorizontalScrollingCell.swift */; };
@@ -96,15 +94,13 @@
 		E720DD8E2BFDD79A0055F990 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		E720DD8F2BFDD79A0055F990 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		E764B3A92C04C4670048E61D /* CategoriesNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNavigationCoordinator.swift; sourceTree = "<group>"; };
-		E764B3AC2C04C93B0048E61D /* OnboardingViewSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewSecond.swift; sourceTree = "<group>"; };
-		E764B3AF2C04C9570048E61D /* OnboardingViewLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewLast.swift; sourceTree = "<group>"; };
 		E764B3B12C04CC6D0048E61D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E764B3B32C04CE110048E61D /* ProfileNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationCoordinator.swift; sourceTree = "<group>"; };
 		E764B3B72C0516D30048E61D /* NewsNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNavigationCoordinator.swift; sourceTree = "<group>"; };
 		E764B3B92C0517600048E61D /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		E79DEFCE2C03C2D500AA350B /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		E79DEFD02C03CAEC00AA350B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		E79DEFD22C03D93600AA350B /* OnboardingViewStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewStart.swift; sourceTree = "<group>"; };
+		E79DEFD22C03D93600AA350B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E79DEFD42C03D98C00AA350B /* OnboardingNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationCoordinator.swift; sourceTree = "<group>"; };
 		E79DEFD62C03D9A800AA350B /* SwipingNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingNavigationCoordinator.swift; sourceTree = "<group>"; };
 		E7A9D19E2BF026CD0097CC24 /* HorizontalScrollingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollingCell.swift; sourceTree = "<group>"; };
@@ -183,9 +179,7 @@
 		E764B3AB2C04C7F20048E61D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				E79DEFD22C03D93600AA350B /* OnboardingViewStart.swift */,
-				E764B3AC2C04C93B0048E61D /* OnboardingViewSecond.swift */,
-				E764B3AF2C04C9570048E61D /* OnboardingViewLast.swift */,
+				E79DEFD22C03D93600AA350B /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -555,7 +549,7 @@
 				2CC8B9FE2C028F8E007CDEAF /* CoordinatorView.swift in Sources */,
 				E764B3B22C04CC6D0048E61D /* ProfileView.swift in Sources */,
 				E7A9D19F2BF026CD0097CC24 /* HorizontalScrollingCell.swift in Sources */,
-				E79DEFD32C03D93600AA350B /* OnboardingViewStart.swift in Sources */,
+				E79DEFD32C03D93600AA350B /* OnboardingView.swift in Sources */,
 				2CAC0C8A2BFC010D006CD646 /* MainTabBarController.swift in Sources */,
 				E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */,
 				E7B0663F2BEEC88A00EBE919 /* BuildConfiguration.swift in Sources */,
@@ -570,7 +564,6 @@
 				E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */,
 				2CC8B9FC2C028C5F007CDEAF /* MainTabBarCoordinator.swift in Sources */,
 				E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */,
-				E764B3B02C04C9570048E61D /* OnboardingViewLast.swift in Sources */,
 				E7B066602BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift in Sources */,
 				2C39C7952BFD571B00DB5B33 /* HorizontalScrollView.swift in Sources */,
 				E7B0665A2BF011C000EBE919 /* MockDataProvider.swift in Sources */,
@@ -582,7 +575,6 @@
 				E7B5782A2BFAAD14007AA9FC /* DesignSystem.swift in Sources */,
 				2C39C7912BFD510B00DB5B33 /* BackgroundColorModifier.swift in Sources */,
 				E7B066642BF0199700EBE919 /* ImageCollectionViewCell.swift in Sources */,
-				E764B3AD2C04C93B0048E61D /* OnboardingViewSecond.swift in Sources */,
 				E79DEFD72C03D9A800AA350B /* SwipingNavigationCoordinator.swift in Sources */,
 				E7B578212BFA9014007AA9FC /* Image+ResizableBordered.swift in Sources */,
 				E764B3BA2C0517600048E61D /* NewsView.swift in Sources */,

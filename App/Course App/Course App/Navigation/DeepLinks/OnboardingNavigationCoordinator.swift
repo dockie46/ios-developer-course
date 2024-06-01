@@ -17,6 +17,24 @@ enum OnboardingNavigationCoordinatorEvent {
 protocol OnboardingCoordinating: NavigationControllerCoordinator {}
 
 final class OnboardingNavigationCoordinator: NSObject, OnboardingCoordinating {
+    
+    private enum Page: Int, CaseIterable {
+        case page1 = 1
+        case page2 = 2
+        case page3 = 3
+
+           var title: String {
+               switch self {
+               case .page1:
+                   "Page 1"
+               case .page2:
+                   "Page 2"
+               case .page3:
+                   "Page 3"
+               }
+           }
+       }
+    
     deinit {
         print("Deinit OnboardingNavigationCoordinator")
     }
@@ -24,15 +42,23 @@ final class OnboardingNavigationCoordinator: NSObject, OnboardingCoordinating {
     private(set) lazy var navigationController: UINavigationController = makeNavigationController()
     private var cancellables = Set<AnyCancellable>()
     private let eventSubject = PassthroughSubject<OnboardingNavigationCoordinatorEvent, Never>()
-    private let initialPage: Int
+    private let pageIndex: Int
     var childCoordinators: [any Coordinator] = []
     
-    init(initialPage: Int) {
-        self.initialPage = initialPage
+    init(pageIndex: Int) {
+        self.pageIndex = pageIndex
+    }
+}
+extension OnboardingNavigationCoordinator {
+    func start() {
+        
+        let p = Page(rawValue: pageIndex) ?? Page.page1
+        let nextOnboardingPageViewController = makeOnBoardingView(page: p)
+        navigationController.setViewControllers([nextOnboardingPageViewController], animated: false)
     }
 }
 
-extension OnboardingNavigationCoordinator {
+private extension OnboardingNavigationCoordinator {
     func makeNavigationController() -> UINavigationController {
         let navigationController = CustomNavigationController()
         navigationController.eventPublisher.sink { [weak self] event in
@@ -49,60 +75,41 @@ extension OnboardingNavigationCoordinator {
         .store(in: &cancellables)
         return navigationController
     }
-    func start() {
-        guard let nextOnboardingPageViewController = nextOnboardingViewController(page: initialPage) else { return }
-        navigationController.setViewControllers([nextOnboardingPageViewController], animated: false)
+    
+    private func makeOnBoardingView(page: Page) -> UIViewController {
+        let onboardingView = OnboardingView(page: page.rawValue, title: page.title, last: page.rawValue == Page.page3.rawValue)
+        onboardingView.eventPublisher.sink { [weak self] event in
+            
+            guard let self else {
+                return
+            }
+            
+            switch event {
+            case .close:
+                self.navigationController.dismiss(animated: true)
+            case let .nextPage(from):
+                
+                var newPage: Page
+                if from <= Page.allCases.count  {
+                    // swiftlint:disable:next force_unwrapping
+                    newPage = Page(rawValue: from + 1)!
+                } else {
+                    newPage = Page.page1
+                }
+                
+                let viewController = self.makeOnBoardingView(page: newPage)
+                self.navigationController.pushViewController(viewController, animated: true)
+            }
+        }
+        .store(in: &cancellables)
+        
+        return UIHostingController(rootView: onboardingView)
     }
 }
+
 // MARK: - EventEmitting
 extension OnboardingNavigationCoordinator: EventEmitting {
     var eventPublisher: AnyPublisher<OnboardingNavigationCoordinatorEvent, Never> {
         eventSubject.eraseToAnyPublisher()
-    }
-}
-extension OnboardingCoordinating {
-    func navigateToOnboardingView(page: Int) {
-        guard let controller = nextOnboardingViewController(page: page) else { return }
-        navigationController.pushViewController(controller, animated: true)
-    }
-
-    func finishOnboarding() {
-        navigationController.dismiss(animated: true)
-    }
-    
-    func nextOnboardingViewController(page: Int) -> UIViewController? {
-        var viewController: UIViewController
-        switch page {
-        case 1:
-            viewController = makeOnboardingView()
-        case 2:
-            viewController = makeOnboardingSecondView()
-        case 3:
-            viewController = makeOnboardingLastView()
-        default:
-            return nil
-        }
-        return viewController
-    }
-    
-    private func makeOnboardingView() -> UIViewController {
-        let controller = UIHostingController(rootView: OnboardingViewStart(coordinator: self))
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        return controller
-    }
-    
-    private func makeOnboardingSecondView() -> UIViewController {
-        let controller = UIHostingController(rootView: OnboardingViewSecond(coordinator: self))
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        return controller
-    }
-    
-    private func makeOnboardingLastView() -> UIViewController {
-        let controller = UIHostingController(rootView: OnboardingViewLast(coordinator: self))
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        return controller
     }
 }
