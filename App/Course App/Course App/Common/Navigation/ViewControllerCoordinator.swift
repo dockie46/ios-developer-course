@@ -11,6 +11,13 @@ protocol ViewControllerCoordinator: Coordinator {
     var rootViewController: UIViewController { get }
 }
 
+extension ViewControllerCoordinator {
+    
+    func showError(title: String) {
+        rootViewController.showInfoAlert(title: title)
+    }
+}
+
 protocol NavigationControllerCoordinator: ViewControllerCoordinator {
     var navigationController: UINavigationController { get }
 }

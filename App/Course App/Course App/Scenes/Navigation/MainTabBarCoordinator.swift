@@ -13,8 +13,17 @@ final class MainTabBarCoordinator: NSObject, TabBarControllerCoordinator {
     var childCoordinators = [Coordinator]()
     private(set) lazy var tabBarController = makeTabBarController()   
     private lazy var cancellables = Set<AnyCancellable>()
+    private let eventSubject = PassthroughSubject<MainTabBarCoordinatorEvent, Never>()
+    
     deinit {
         print("MainTabBarCoordinator")
+    }
+}
+
+// MARK: - EventEmitting
+extension MainTabBarCoordinator: EventEmitting {
+    var eventPublisher: AnyPublisher<MainTabBarCoordinatorEvent, Never> {
+        eventSubject.eraseToAnyPublisher()
     }
 }
 
@@ -27,6 +36,7 @@ extension MainTabBarCoordinator {
             setupProfileView()
         ]
     }
+    
     func handleDeeplink(deeplink: DeepLink) {
         switch deeplink {
         case let .onboarding(page):
@@ -63,6 +73,7 @@ private extension MainTabBarCoordinator {
             .store(in: &cancellables)
         return coordinator
     }
+    
     func makeTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
         tabBarController.delegate = self
@@ -89,6 +100,11 @@ private extension MainTabBarCoordinator {
     func setupProfileView() -> UIViewController {
         let profileCoordinator = ProfileNavigationCoordinator()
         startChildCoordinator(profileCoordinator)
+        profileCoordinator.eventPublisher
+            .sink { [weak self] event in
+                self?.handle(event: event)
+            }
+            .store(in: &cancellables)
         profileCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
         return profileCoordinator.rootViewController
     }
@@ -100,6 +116,13 @@ private extension MainTabBarCoordinator {
         switch event {
         case let .dismiss( coordinator):
             release(coordinator: coordinator)
+        }
+    }
+    
+    func handle(event: ProfileNavigationCoordinatorEvent) {
+        switch event {
+        case .logout:
+            eventSubject.send(.logout(self))
         }
     }
 }
@@ -114,6 +137,7 @@ extension MainTabBarCoordinator: UITabBarControllerDelegate {
 }
 
 extension UIViewController {
+    
     func showInfoAlert(title: String, message: String? = nil, handler: (() -> Void)? = nil) {
         guard presentedViewController == nil else {
             return
