@@ -23,7 +23,7 @@ final class AppCoordinator: AppCoordinating, ObservableObject {
     
     private lazy var cancellables = Set<AnyCancellable>()
     var childCoordinators = [Coordinator]()
-    @Published var isAuthorizedFlow = true
+    @Published var isAuthorizedFlow = false
     
     // MARK: Lifecycle
     init() {}
@@ -74,7 +74,6 @@ private extension AppCoordinator {
             rootViewController = makeSignInFlow().rootViewController
             release(coordinator: coordinator)
             isAuthorizedFlow = false
-            print("logout")
         }
     }
     
@@ -84,7 +83,6 @@ private extension AppCoordinator {
             rootViewController = makeTabBarFlow().rootViewController
             release(coordinator: coordinator)
             isAuthorizedFlow = true
-            print("signedIn")
         }
     }
 }
