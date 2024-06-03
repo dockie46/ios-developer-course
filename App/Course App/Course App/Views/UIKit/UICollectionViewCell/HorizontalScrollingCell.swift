@@ -53,6 +53,7 @@ extension HorizontalScrollingCell: UICollectionViewDataSource {
         jokes.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.contentConfiguration = UIHostingConfiguration {
             Image(uiImage: jokes[indexPath.row].image ?? UIImage())

@@ -29,11 +29,15 @@ extension UICollectionView {
         return cell
     }
 
-    func dequeueSupplementaryView<T: UICollectionViewCell>(ofKind: String, for indexPath: IndexPath) -> T where T: ReusableIdentifier {
+    func dequeueSupplementaryView<T: UICollectionViewCell>(
+        ofKind: String,
+        for indexPath: IndexPath
+    ) -> T where T: ReusableIdentifier {
         guard let cell = dequeueReusableSupplementaryView(
             ofKind: ofKind,
             withReuseIdentifier: T.identifier,
-            for: indexPath) as? T else {
+            for: indexPath
+        ) as? T else {
             fatalError("SupplementaryView with identifier: \(T.identifier) could not be dequeued!")
         }
 
