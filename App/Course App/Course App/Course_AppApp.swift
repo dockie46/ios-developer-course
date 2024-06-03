@@ -12,7 +12,6 @@ import SwiftUI
 struct Course_AppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     private let logger = Logger()
-    private let isUIKit = true
     var body: some Scene {
         WindowGroup {
             MainTabView()

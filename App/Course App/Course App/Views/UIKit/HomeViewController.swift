@@ -54,7 +54,7 @@ private extension HomeViewController {
         }
         .store(in: &cancellables)
     }
-
+    
     func applySnapshot(data: [SectionData], animatingDifferences: Bool = true) {
         guard dataSource.snapshot().numberOfSections == 0 else {
             let snapshot = dataSource.snapshot()
@@ -62,38 +62,43 @@ private extension HomeViewController {
             return
             // snapshot.moveItem((data.first?.jokes.first)!, afterItem: (data.first?.jokes.last)!)
         }
-
+        
         var snapshot = Snapshot()
         snapshot.appendSections(data)
-
+        
         data.forEach { section in
             snapshot.appendItems([section.jokes], toSection: section)
         }
-
+        
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
-
+    
     func makeDataSource() -> DataSource {
         let dataSource = DataSource(collectionView: categoriesCollectionView) { collectionView, indexPath, _ in
             let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
-
+            
             let imageHorizontalScrollCell: HorizontalScrollingCell = collectionView.dequeueReusableCell(for: indexPath)
             imageHorizontalScrollCell.setAndReloadData(section.jokes)
             
             return imageHorizontalScrollCell
         }
-
+        
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
             guard kind == UICollectionView.elementKindSectionHeader else {
                 return nil
             }
-
+            
             let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
-            let labelCell: LabelCollectionViewCell = collectionView.dequeueSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
-            labelCell.nameLabel.text = section.title
+            let labelCell = collectionView.dequeueSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                for: indexPath
+            )
+            labelCell.contentConfiguration = UIHostingConfiguration {
+                HeaderView(title: section.title)
+            }
             return labelCell
         }
-
+        
         return dataSource
     }
 }
@@ -125,7 +130,7 @@ private extension HomeViewController {
         setupCollectionView()
         readData()
     }
-
+    
     func setupCollectionView() {
         categoriesCollectionView.backgroundColor = .bg
         categoriesCollectionView.isPagingEnabled = true
@@ -133,8 +138,8 @@ private extension HomeViewController {
         categoriesCollectionView.showsVerticalScrollIndicator = false
         categoriesCollectionView.delegate = self
         categoriesCollectionView.register(HorizontalScrollingCell.self)
-        categoriesCollectionView.register(LabelCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
-
+        categoriesCollectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader)
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical // Change this to vertical
         layout.minimumLineSpacing = UIConstant.minimumLineSpacing // Spacing here is not necessary, but adds a better inset for horizontal scrolling. Gives you a tiny peek of the background. Probably not great for vertical
