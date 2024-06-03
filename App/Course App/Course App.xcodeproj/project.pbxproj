@@ -35,6 +35,7 @@
 		E7748D402C0E6BE5002F1BDB /* ProfileNavigationCoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7748D3F2C0E6BE5002F1BDB /* ProfileNavigationCoordinatorEvent.swift */; };
 		E7748D422C0E6E23002F1BDB /* MainTabBarCoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7748D412C0E6E23002F1BDB /* MainTabBarCoordinatorEvent.swift */; };
 		E7748D442C0E72A8002F1BDB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7748D432C0E72A8002F1BDB /* NetworkError.swift */; };
+		E7748D462C0E752A002F1BDB /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7748D452C0E752A002F1BDB /* Deeplink.swift */; };
 		E79DEFCF2C03C2D500AA350B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFCE2C03C2D500AA350B /* CustomNavigationController.swift */; };
 		E79DEFD12C03CAEC00AA350B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD02C03CAEC00AA350B /* AppCoordinator.swift */; };
 		E79DEFD32C03D93600AA350B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79DEFD22C03D93600AA350B /* OnboardingView.swift */; };
@@ -122,6 +123,7 @@
 		E7748D3F2C0E6BE5002F1BDB /* ProfileNavigationCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationCoordinatorEvent.swift; sourceTree = "<group>"; };
 		E7748D412C0E6E23002F1BDB /* MainTabBarCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinatorEvent.swift; sourceTree = "<group>"; };
 		E7748D432C0E72A8002F1BDB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E7748D452C0E752A002F1BDB /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
 		E79DEFCE2C03C2D500AA350B /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		E79DEFD02C03CAEC00AA350B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E79DEFD22C03D93600AA350B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 				E7AEA6552C0E4F5600BF18C0 /* Protocols */,
 				E7AEA6592C0E608E00BF18C0 /* Services */,
 				E7748D432C0E72A8002F1BDB /* NetworkError.swift */,
+				E7748D452C0E752A002F1BDB /* Deeplink.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				2CC8B9F82C028967007CDEAF /* Coordinator.swift in Sources */,
 				E764B3B82C0516D30048E61D /* NewsNavigationCoordinator.swift in Sources */,
 				E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */,
+				E7748D462C0E752A002F1BDB /* Deeplink.swift in Sources */,
 				2CC8B9FC2C028C5F007CDEAF /* MainTabBarCoordinator.swift in Sources */,
 				E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */,
 				E7AEA6602C0E610E00BF18C0 /* KeychainManagerError.swift in Sources */,

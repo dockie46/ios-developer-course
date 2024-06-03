@@ -60,10 +60,6 @@ extension AppCoordinator {
         .store(in: &cancellables)
         return mainTabCoordinator
     }
-
-    func handleDeeplink(deeplink: DeepLink) {
-        childCoordinators.forEach { $0.handleDeeplink(deeplink: deeplink) }
-    }
 }
 
 // MARK: - Event handling
@@ -80,9 +76,18 @@ private extension AppCoordinator {
     func handle(_ event: SignInNavigationCoordinatorEvent) {
         switch event {
         case let .signedIn(coordinator, email, password):
+            
             rootViewController = makeTabBarFlow().rootViewController
             release(coordinator: coordinator)
             isAuthorizedFlow = true
+            
+            do {
+                try! KeychainManager().store(key: KeychainManager.key_username, value: email)
+                try! KeychainManager().store(key: KeychainManager.key_password, value: password)
+                
+            } catch {
+                
+            }
         }
     }
 }

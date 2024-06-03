@@ -15,7 +15,14 @@ enum DeepLink {
     case news
 }
 
+protocol DeeplinkHandling: AnyObject {
+    func handleDeeplink(_ deeplink: Deeplink)
+}
+
 class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    weak var deeplinkHandler: DeeplinkHandling?
+    
     let appCoordinator: some AppCoordinating = {
         let coordinator = AppCoordinator()
         coordinator.start()

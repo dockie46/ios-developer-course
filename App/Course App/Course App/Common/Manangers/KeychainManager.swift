@@ -29,3 +29,8 @@ final class KeychainManager: KeychainManaging {
         try keychain.remove(key)
     }
 }
+
+extension KeychainManager {
+    static let key_username = "app.email"
+    static let key_password = "app.password"
+}
