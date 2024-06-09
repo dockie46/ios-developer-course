@@ -64,8 +64,8 @@ private extension SignInNavigationCoordinator {
 private extension SignInNavigationCoordinator {
     func handle(_ event: SignInViewEvent) {
         switch event {
-        case .signedIn(let email, let password):
-            eventSubject.send(.signedIn(self, email: email, password: password))
+        case .signedIn:
+            eventSubject.send(.signedIn(self))
         }
     }
 }

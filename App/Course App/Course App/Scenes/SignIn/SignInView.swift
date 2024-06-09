@@ -19,7 +19,7 @@ struct SignInView: View {
             TextField("Password", text: $password)
                 .textContentType(.password)
             Button("Sign in") {
-                eventSubject.send(.signedIn(email: email, password: password))
+                eventSubject.send(.signedIn)
             }
         }
     }

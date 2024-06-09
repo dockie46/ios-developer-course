@@ -7,5 +7,5 @@
 
 import Foundation
 enum SignInViewEvent {
-    case signedIn(email: String, password: String)
+    case signedIn
 }

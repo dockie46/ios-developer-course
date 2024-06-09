@@ -7,5 +7,5 @@
 
 import Foundation
 enum SignInNavigationCoordinatorEvent {
-    case signedIn(Coordinator, email: String, password: String)
+    case signedIn(Coordinator)
 }

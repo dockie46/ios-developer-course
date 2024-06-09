@@ -75,19 +75,11 @@ private extension AppCoordinator {
     
     func handle(_ event: SignInNavigationCoordinatorEvent) {
         switch event {
-        case let .signedIn(coordinator, email, password):
+        case let .signedIn(coordinator):
             
             rootViewController = makeTabBarFlow().rootViewController
             release(coordinator: coordinator)
             isAuthorizedFlow = true
-            
-            do {
-                try! KeychainManager().store(key: KeychainManager.key_username, value: email)
-                try! KeychainManager().store(key: KeychainManager.key_password, value: password)
-                
-            } catch {
-                
-            }
         }
     }
 }
