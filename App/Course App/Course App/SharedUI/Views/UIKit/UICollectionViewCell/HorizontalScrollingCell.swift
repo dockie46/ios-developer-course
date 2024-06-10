@@ -56,8 +56,19 @@ extension HorizontalScrollingCell: UICollectionViewDataSource {
         
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.contentConfiguration = UIHostingConfiguration {
-            Image(uiImage: jokes[indexPath.row].image ?? UIImage())
-                .resizableBordered(cornerRadius: UIConstant.radius, color: .blue)
+            if let url = try?
+                ImagesRouter.size300x200.asURLRequest().url {
+                AsyncImage(url: url) { image in
+                    image.resizableBordered(cornerRadius: UIConstant.radius, color: .blue)
+                        .scaledToFit()
+                } placeholder: {
+                    Color.gray
+                }
+            } else {
+                Text("ERROR MESSAGE")
+            }
+            //            Image(uiImage:  UIImage())
+            //                .resizableBordered(cornerRadius: UIConstant.radius, color: .blue)
         }
         //        let cell: ImageCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         //        cell.imageView.image = jokes[indexPath.item].image

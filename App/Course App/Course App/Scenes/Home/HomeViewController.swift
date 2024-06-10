@@ -32,17 +32,19 @@ final class HomeViewController: UIViewController {
     @IBOutlet private var categoriesCollectionView: UICollectionView!
     
     // MARK: DataSource
-    private lazy var dataProvider = MockDataProvider()
     typealias DataSource = UICollectionViewDiffableDataSource<SectionData, [Joke]>
     typealias Snapshot = NSDiffableDataSourceSnapshot<SectionData, [Joke]>
     
     private lazy var dataSource = makeDataSource()
     private lazy var cancellables = Set<AnyCancellable>()
+    private let jokeService: JokeServicing = JokeService(apiManager: APIManager())
+    @Published private var data: [SectionData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         title = "Categories"
+        fetchData()
         // Do any additional setup after loading the view.
     }
 }
@@ -50,7 +52,7 @@ final class HomeViewController: UIViewController {
 // MARK: - UICollectionViewDataSource
 private extension HomeViewController {
     func readData() {
-        dataProvider.$data.sink { [weak self] data in
+        $data.sink { [weak self] data in
             self?.applySnapshot(data: data, animatingDifferences: true)
         }
         .store(in: &cancellables)
@@ -149,5 +151,42 @@ private extension HomeViewController {
         layout.sectionHeadersPinToVisibleBounds = true
         layout.headerReferenceSize = CGSize(width: categoriesCollectionView.contentSize.width, height: UIConstant.headerReferenceSize)
         categoriesCollectionView.setCollectionViewLayout(layout, animated: false)
+    }
+}
+
+// MARK: Data fetching
+extension HomeViewController {
+    @MainActor
+    func fetchData() {
+        Task {
+            let categories = try await jokeService.fetchCategories()
+
+            try await withThrowingTaskGroup(of: JokeResponse.self) { [weak self] group in
+                guard let self else {
+                    return
+                }
+
+                categories.forEach { category in
+                    for _ in 1...5 {
+                        group.addTask {
+                            try await self.jokeService.fetchJokeForCategory(category)
+                        }
+                    }
+                }
+
+                var jokesResponses: [JokeResponse] = []
+                for try await jokeResponse in group {
+                    jokesResponses.append(jokeResponse)
+                }
+
+                let dataDictionary = Dictionary(grouping: jokesResponses) { $0.categories.first ?? "" }
+                var sectionData = [SectionData]()
+                for key in dataDictionary.keys {
+//                    sectionData.append(SectionData(title: key, jokes: []))
+                    sectionData.append(SectionData(title: key, jokes: dataDictionary[key] ?? []))
+                }
+                data = sectionData
+            }
+        }
     }
 }

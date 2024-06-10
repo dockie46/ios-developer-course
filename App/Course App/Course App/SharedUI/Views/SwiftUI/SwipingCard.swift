@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-typealias Action<T> = (T) -> Void
 struct SwipingCard: View {
     private enum UIConstant {
         static let cardRadius: CGFloat = 15
@@ -36,7 +35,6 @@ struct SwipingCard: View {
     }
     // MARK: - Configuration
     struct Configuration: Equatable {
-        let image: Image
         let title: String
         let description: String
     }
@@ -60,7 +58,6 @@ struct SwipingCard: View {
             VStack {
                 Spacer()
                 ScratchView(
-                    image: configuration.image,
                     text: configuration.description
                 )
                 Spacer()
@@ -144,7 +141,6 @@ struct Card_Previews: PreviewProvider {
     static var previews: some View {
         SwipingCard(
             configuration: SwipingCard.Configuration(
-                image: Image("nature"),
                 title: "Card Title",
                 description: "This is a short description. This is a short description. This is a short description. This is a short description. This is a short description."
             ),
