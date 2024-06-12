@@ -486,6 +486,8 @@
 				E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */,
 				2CAC0C872BFBE859006CD646 /* ScratchView.swift */,
 				2C39C7942BFD571B00DB5B33 /* HorizontalScrollView.swift */,
+				E764B3B12C04CC6D0048E61D /* ProfileView.swift */,
+				E764B3B92C0517600048E61D /* NewsView.swift */,
 				E7AEA6462C0DF75600BF18C0 /* HeaderView.swift */,
 			);
 			path = SwiftUI;
@@ -745,6 +747,7 @@
 				E7748D3E2C0E6831002F1BDB /* SignInNavigationCoordinatorEvent.swift in Sources */,
 				2CAC0C882BFBE859006CD646 /* ScratchView.swift in Sources */,
 				E7748D332C0E6532002F1BDB /* KeychainManager.swift in Sources */,
+				2C39C7932BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift in Sources */,
 				2CC8B9F82C028967007CDEAF /* Coordinator.swift in Sources */,
 				E764B3B82C0516D30048E61D /* NewsNavigationCoordinator.swift in Sources */,
 				E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */,
