@@ -19,6 +19,7 @@ protocol OnboardingCoordinating: NavigationControllerCoordinator {
 }
 
 final class OnboardingNavigationCoordinator: NSObject, OnboardingCoordinating {
+    
     func handle(_ event: OnboardingViewEvent) {
         switch event {
         case .close:
@@ -82,6 +83,7 @@ final class OnboardingNavigationCoordinator: NSObject, OnboardingCoordinating {
         }
     }
 }
+
 extension OnboardingNavigationCoordinator {
     func start() {
         let p = Page(rawValue: pageIndex) ?? Page.page1
@@ -99,15 +101,7 @@ private extension OnboardingNavigationCoordinator {
     func makeNavigationController() -> UINavigationController {
         let navigationController = CustomNavigationController()
         navigationController.eventPublisher.sink { [weak self] event in
-            guard let self else {
-                return
-            }
-            switch event {
-            case .dismiss:
-                self.eventSubject.send(.dismiss(self))
-            default:
-                break
-            }
+            self?.handle(event)
         }
         .store(in: &cancellables)
         return navigationController
@@ -123,6 +117,20 @@ private extension OnboardingNavigationCoordinator {
         return UIHostingController(rootView: onboardingView)
     }
 }
+
+// MARK: - Event handling
+private extension OnboardingNavigationCoordinator {
+    func handle(_ event: CustomNavigationControllerEvent) {
+        switch event {
+        case .dismiss:
+            self.eventSubject.send(.dismiss(self))
+        default:
+            break
+        }
+    }
+}
+
+
 
 // MARK: - EventEmitting
 extension OnboardingNavigationCoordinator: EventEmitting {

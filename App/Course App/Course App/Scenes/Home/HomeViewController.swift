@@ -16,6 +16,7 @@ struct HomeView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: HomeViewController, context: Context) {
+        
     }
 }
 
@@ -38,12 +39,20 @@ final class HomeViewController: UIViewController {
     
     private lazy var dataSource = makeDataSource()
     private lazy var cancellables = Set<AnyCancellable>()
+    private lazy var logger = Logger()
+    private let eventSubject = PassthroughSubject<HomeViewEvent, Never>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         title = "Categories"
         // Do any additional setup after loading the view.
+    }
+}
+// MARK: - EventEmitting
+extension HomeViewController: EventEmitting {
+    var eventPublisher: AnyPublisher<HomeViewEvent, Never> {
+        eventSubject.eraseToAnyPublisher()
     }
 }
 
@@ -79,7 +88,10 @@ private extension HomeViewController {
             let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
             
             let imageHorizontalScrollCell: HorizontalScrollingCell = collectionView.dequeueReusableCell(for: indexPath)
-            imageHorizontalScrollCell.setAndReloadData(section.jokes)
+            imageHorizontalScrollCell.setAndReloadData(section.jokes, 
+                                                       callback: { [weak self] item in
+                self?.eventSubject.send(.itemSelected(item))
+            })
             
             return imageHorizontalScrollCell
         }

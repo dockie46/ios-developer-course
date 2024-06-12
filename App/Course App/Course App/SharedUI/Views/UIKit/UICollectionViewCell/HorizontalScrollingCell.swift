@@ -14,6 +14,7 @@ class HorizontalScrollingCell: UICollectionViewCell {
     }
     private let collectionView: UICollectionView
     private var jokes: [Joke] = []
+    private var didTapCallback: Action<Joke>?
     
     override init(frame: CGRect) {
         let layout = UICollectionViewFlowLayout()
@@ -75,9 +76,17 @@ extension HorizontalScrollingCell: UICollectionViewDelegateFlowLayout {
 
 // MARK: PassData
 extension HorizontalScrollingCell {
-    func setAndReloadData(_ jokes: [Joke]) {
+    func setAndReloadData(_ jokes: [Joke], callback: Action<Joke>? = nil) {
         self.jokes = jokes
         collectionView.reloadData()
+        didTapCallback = callback
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension HorizontalScrollingCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didTapCallback?(jokes[indexPath.row])
     }
 }
 

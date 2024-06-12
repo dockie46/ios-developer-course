@@ -16,7 +16,7 @@ final class MainTabBarCoordinator: NSObject, TabBarControllerCoordinator {
     private let eventSubject = PassthroughSubject<MainTabBarCoordinatorEvent, Never>()
     
     deinit {
-        print("MainTabBarCoordinator")
+        print("Deinit MainTabBarCoordinator")
     }
 }
 

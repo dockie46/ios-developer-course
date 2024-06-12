@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import os
 import UIKit
 import SwiftUI
 
@@ -15,8 +16,14 @@ final class ProfileNavigationCoordinator: NSObject, NavigationControllerCoordina
     var childCoordinators: [any Coordinator] = [Coordinator]()
     var cancellables = Set<AnyCancellable>()
     private let eventSubject = PassthroughSubject<ProfileNavigationCoordinatorEvent, Never>()
+    private let logger = Logger()
+    
     func start() {
         navigationController.setViewControllers([makeProfileCard()], animated: false)
+    }
+    // MARK: Lifecycle
+    deinit {
+        logger.info("Deinit ProfileNavigationCoordinator")
     }
 }
 
@@ -54,14 +61,26 @@ private extension ProfileNavigationCoordinator {
     func makeOnboardingFlow(navigationController: UINavigationController? = nil) -> ViewControllerCoordinator {
         
         let coordinator = OnboardingNavigationCoordinator(pageIndex: 1, navigationController: navigationController)
+        coordinator.eventPublisher
+            .sink { [weak self] event in
+                self?.handle(event)
+            }
+            .store(in: &cancellables)
         // if navigation controller is injected we need to manage pop events
         if navigationController != nil {
-          coordinator.navigationController.delegate = self
+            coordinator.navigationController.delegate = self
         }
 
         startChildCoordinator(coordinator)
 
         return coordinator
+    }
+    
+    func handle(_ event: OnboardingNavigationCoordinatorEvent) {
+        switch event {
+        case let .dismiss(coordinator):
+            release(coordinator: coordinator)
+        }
     }
 }
 
