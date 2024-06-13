@@ -6,14 +6,19 @@
 //
 
 import Foundation
+import os
 import UIKit
 import SwiftUI
 
 final class SwipingNavigationCoordinator: NSObject, NavigationControllerCoordinator {
     private(set) var navigationController: UINavigationController = CustomNavigationController()
     var childCoordinators: [any Coordinator] = [Coordinator]()
+    private let logger = Logger()
     func start() {
         navigationController.setViewControllers([makeSwipingCard()], animated: false)
+    }
+    deinit {
+        logger.info("Deinit SwipingNavigationCoordinator")
     }
 }
 

@@ -17,6 +17,7 @@
 		2CC8B9FA2C028B4C007CDEAF /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8B9F92C028B4C007CDEAF /* ViewControllerCoordinator.swift */; };
 		2CC8B9FC2C028C5F007CDEAF /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8B9FB2C028C5F007CDEAF /* MainTabBarCoordinator.swift */; };
 		2CC8B9FE2C028F8E007CDEAF /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8B9FD2C028F8E007CDEAF /* CoordinatorView.swift */; };
+		2CD3A4952C1A460800A72066 /* HomeViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD3A4942C1A460800A72066 /* HomeViewEvent.swift */; };
 		E720DD902BFDD79A0055F990 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8D2BFDD79A0055F990 /* Poppins-MediumItalic.ttf */; };
 		E720DD912BFDD79A0055F990 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8E2BFDD79A0055F990 /* Poppins-Bold.ttf */; };
 		E720DD922BFDD79A0055F990 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8F2BFDD79A0055F990 /* Poppins-Regular.ttf */; };
@@ -118,6 +119,7 @@
 		2CC8B9F92C028B4C007CDEAF /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
 		2CC8B9FB2C028C5F007CDEAF /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		2CC8B9FD2C028F8E007CDEAF /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		2CD3A4942C1A460800A72066 /* HomeViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewEvent.swift; sourceTree = "<group>"; };
 		E720DD8D2BFDD79A0055F990 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		E720DD8E2BFDD79A0055F990 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		E720DD8F2BFDD79A0055F990 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				E7AEA64A2C0E4ADF00BF18C0 /* Navigation */,
 				E7B066542BF00B1200EBE919 /* HomeViewController.swift */,
 				E7B066552BF00B1200EBE919 /* HomeViewController.xib */,
+				2CD3A4942C1A460800A72066 /* HomeViewEvent.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 				2CC8B9F82C028967007CDEAF /* Coordinator.swift in Sources */,
 				E764B3B82C0516D30048E61D /* NewsNavigationCoordinator.swift in Sources */,
 				E7B066622BF0159D00EBE919 /* ReusableIdentifier.swift in Sources */,
+				2CD3A4952C1A460800A72066 /* HomeViewEvent.swift in Sources */,
 				E7748D462C0E752A002F1BDB /* Deeplink.swift in Sources */,
 				2CC8B9FC2C028C5F007CDEAF /* MainTabBarCoordinator.swift in Sources */,
 				E7B0660A2BEEB1A600EBE919 /* ContentView.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import os
 import UIKit
 
 enum CustomNavigationControllerEvent {
@@ -15,7 +16,9 @@ enum CustomNavigationControllerEvent {
 }
 class CustomNavigationController: UINavigationController {
     
-    private let eventSubject = PassthroughSubject<CustomNavigationControllerEvent, Never>()
+    private let eventSubject = PassthroughSubject<CustomNavigationControllerEvent, Never>()    
+    private let logger = Logger()
+    private var isSwipingBack = false
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,23 +41,26 @@ extension CustomNavigationController: EventEmitting {
     }
 }
 
+// MARK: - UIGestureRecognizerDelegate
 extension CustomNavigationController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        print("herere??")
-        // add custom logic while swiping to dismiss
+        logger.info("gesture recognizer \(gestureRecognizer)")
+        isSwipingBack = gestureRecognizer == interactivePopGestureRecognizer
         return true
     }
 }
 
+// MARK: - UINavigationControllerDelegate
 extension CustomNavigationController: UINavigationControllerDelegate {
     func navigationController(
         _ navigationController: UINavigationController,
         didShow viewController: UIViewController,
         animated _: Bool
     ) {
-        if viewController == viewControllers.last {
-            print("swipe back???")
+        if isSwipingBack {
+            logger.info("Swiped back to \(viewController)")
             eventSubject.send(.swipeBack)
+            isSwipingBack.toggle()
         }
     }
 }

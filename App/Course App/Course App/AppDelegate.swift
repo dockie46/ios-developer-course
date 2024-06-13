@@ -36,7 +36,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     func deeplinkFromService() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            self.appCoordinator.handleDeeplink(deeplink: .onboarding(page: 1))
+            self.appCoordinator.handleDeeplink(.onboarding(page: 1))
 //            self.appCoordinator.handleDeeplink(deeplink: .news)
         }
     }
