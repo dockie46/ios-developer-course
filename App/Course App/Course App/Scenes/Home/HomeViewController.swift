@@ -41,6 +41,7 @@ final class HomeViewController: UIViewController {
     private lazy var logger = Logger()
     private let eventSubject = PassthroughSubject<HomeViewEvent, Never>()
     private let jokeService: JokeServicing = JokeService(apiManager: APIManager())
+    private let store: StoreManaging = FirebaseStoreManager()
     @Published private var data: [SectionData] = []
     
     override func viewDidLoad() {
@@ -90,9 +91,9 @@ private extension HomeViewController {
             let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
             
             let imageHorizontalScrollCell: HorizontalScrollingCell = collectionView.dequeueReusableCell(for: indexPath)
-            imageHorizontalScrollCell.setAndReloadData(section.jokes, 
-                                                       callback: { [weak self] item in
-                self?.eventSubject.send(.itemSelected(item))
+            imageHorizontalScrollCell.setAndReloadData(section.jokes,
+                                                       callback: { [weak self] item in  self?.eventSubject.send(.itemSelected(item)) },
+                                                       didLike: {  [weak self] item in  self?.storeLike(joke: item)
             })
             
             return imageHorizontalScrollCell
@@ -169,6 +170,13 @@ private extension HomeViewController {
 // MARK: Data fetching
 extension HomeViewController {
     @MainActor
+    func storeLike(joke: Joke) {
+        Task {
+            try await store.storeLike(jokeId: joke.id, liked: !joke.liked)
+        }
+    }
+    
+    @MainActor
     func fetchData() {
         Task {
             let categories = try await jokeService.fetchCategories()
@@ -185,18 +193,21 @@ extension HomeViewController {
                         }
                     }
                 }
-
+                
+                var likes: [String: Bool] = [:]
                 var jokesResponses: [JokeResponse] = []
                 for try await jokeResponse in group {
                     jokesResponses.append(jokeResponse)
+                    let liked = try? await store.fetchLiked(jokeId: jokeResponse.id)
+                    likes[jokeResponse.id] = liked ?? false
                 }
 
                 let dataDictionary = Dictionary(grouping: jokesResponses) { $0.categories.first ?? "" }
                 var sectionData = [SectionData]()
                 for key in dataDictionary.keys {
-//                    sectionData.append(SectionData(title: key, jokes: []))
-                    sectionData.append(SectionData(title: key, jokes: dataDictionary[key] ?? []))
+                    sectionData.append(SectionData(title: key, jokes: dataDictionary[key] ?? [], likes: likes))
                 }
+                
                 data = sectionData
             }
         }

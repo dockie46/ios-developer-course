@@ -22,11 +22,14 @@ final class AppCoordinator: AppCoordinating, ObservableObject {
     }()
     
     private lazy var cancellables = Set<AnyCancellable>()
+    private lazy var keychainService = KeychainService(keychainManager: KeychainManager())
     var childCoordinators = [Coordinator]()
     @Published var isAuthorizedFlow = false
     
     // MARK: Lifecycle
-    init() {}
+    init() {
+        isAuthorizedFlow = (try? keychainService.fetchAuthData()) != nil
+    }
 }
 
 // MARK: - Start coordinator
@@ -39,6 +42,7 @@ extension AppCoordinator {
         UITabBar.appearance().backgroundColor = .brown
         UITabBar.appearance().tintColor = .red
         UITabBar.appearance().unselectedItemTintColor = .white
+        UITabBar.appearance().isTranslucent = false
     }
     
     func makeSignInFlow() -> ViewControllerCoordinator {

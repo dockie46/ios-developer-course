@@ -62,7 +62,7 @@ struct SwipingView: View {
                 }
                 
                 for try await jokeResponse in group {
-                    jokes.append(Joke(jokeResponse: jokeResponse))
+                    jokes.append(Joke(jokeResponse: jokeResponse, liked: false))
                 }
             }
         }

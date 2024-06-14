@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ProfileView: View {
     private let eventSubject = PassthroughSubject<ProfileViewEvent, Never>()
+    private let authManager = FirebaseAuthManager()
     var body: some View {
         VStack(alignment:.leading, spacing: 20) {
             
@@ -20,7 +21,7 @@ struct ProfileView: View {
                 eventSubject.send(.onboardingModal)
             }
             Button("Sign out") {
-                eventSubject.send(.signOut)
+               signOut()
             }
             
             Spacer()
@@ -33,6 +34,16 @@ struct ProfileView: View {
 extension ProfileView: EventEmitting {
     var eventPublisher: AnyPublisher<ProfileViewEvent, Never> {
         eventSubject.eraseToAnyPublisher()
+    }
+}
+
+private extension ProfileView {
+    @MainActor
+    func signOut() {
+        Task {
+            try? await authManager.signOut()
+            eventSubject.send(.signOut)
+        }
     }
 }
 

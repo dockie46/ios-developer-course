@@ -10,4 +10,6 @@ import Foundation
 protocol KeychainServicing {
     var keychainManager: KeychainManaging { get }
     func storeAuthData(authData: String) throws
+    func fetchAuthData() throws -> String
+    func cleanAuthData() throws
 }
