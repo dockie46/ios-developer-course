@@ -42,6 +42,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        title = "Categories"
         // Do any additional setup after loading the view.
     }
 }
@@ -142,7 +143,7 @@ private extension HomeViewController {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical // Change this to vertical
-        layout.minimumLineSpacing = UIConstant.minimumLineSpacing // Spacing here is not necessary, but adds a better inset for horizontal scrolling. Gives you a tiny peek of the background. Probably not great for vertical
+        layout.minimumLineSpacing = UIConstant.minimumLineSpacing 
         layout.minimumInteritemSpacing = UIConstant.minimumInteritemSpacing
         layout.sectionInset = UIEdgeInsets(top: UIConstant.edgeVertical, left: UIConstant.edgeHorizontal, bottom: UIConstant.edgeVertical, right: UIConstant.edgeHorizontal)
         layout.sectionHeadersPinToVisibleBounds = true

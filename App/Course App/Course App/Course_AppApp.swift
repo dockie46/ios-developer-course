@@ -14,7 +14,7 @@ struct Course_AppApp: App {
     private let logger = Logger()
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            CoordinatorView(coordinator: delegate.appCoordinator)
                 .ignoresSafeArea(edges: .all)
                 .onAppear {
                     logger.info("Content view has appeared")

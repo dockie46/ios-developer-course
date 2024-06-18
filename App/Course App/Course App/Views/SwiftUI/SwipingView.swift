@@ -4,15 +4,17 @@
 //
 //  Created by Patrik Urban on 19.05.2024.
 //
-
+import Combine
 import SwiftUI
 
 struct SwipingView: View {
+    
     private enum UIConstant {
         static let paddingHeight: CGFloat = 20
         static let frameDimensionDivider: CGFloat = 1.2
         static let frameDimensionMultiplier: CGFloat = 1.5
     }
+    
     private let dataProvider = MockDataProvider()
     
     var body: some View {
@@ -47,6 +49,7 @@ struct SwipingView: View {
             }
         }
         .defaultBackgroundColor()
+        .navigationTitle("Random jokes")
     }
 }
 
