@@ -617,6 +617,9 @@
 				E7B066092BEEB1A600EBE919 /* ContentView.swift */,
 				E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */,
 				2CAC0C872BFBE859006CD646 /* ScratchView.swift */,
+				2C39C7942BFD571B00DB5B33 /* HorizontalScrollView.swift */,
+				E764B3B12C04CC6D0048E61D /* ProfileView.swift */,
+				E764B3B92C0517600048E61D /* NewsView.swift */,
 				E7AEA6462C0DF75600BF18C0 /* HeaderView.swift */,
 			);
 			path = SwiftUI;
@@ -891,6 +894,7 @@
 				E7748D3E2C0E6831002F1BDB /* SignInNavigationCoordinatorEvent.swift in Sources */,
 				E780AFD72C1645E900C3273D /* ImagesRouter.swift in Sources */,
 				2CAC0C882BFBE859006CD646 /* ScratchView.swift in Sources */,
+				2C39C7932BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift in Sources */,
 				E7748D332C0E6532002F1BDB /* KeychainManager.swift in Sources */,
 				2CC8B9F82C028967007CDEAF /* Coordinator.swift in Sources */,
 				E764B3B82C0516D30048E61D /* NewsNavigationCoordinator.swift in Sources */,
@@ -912,6 +916,9 @@
 				2C81DA8F2C052839001A9BDB /* EventEmitting.swift in Sources */,
 				E780AFE02C1650D500C3273D /* JokeService.swift in Sources */,
 				E7B0665D2BF012E900EBE919 /* LabelCollectionViewCell.swift in Sources */,
+				E7C38F052C0DE9B30079FA1A /* TextType.swift in Sources */,
+				E79DEFCF2C03C2D500AA350B /* CustomNavigationController.swift in Sources */,
+				E7B5782A2BFAAD14007AA9FC /* DesignSystem.swift in Sources */,
 				E7C38F052C0DE9B30079FA1A /* TextType.swift in Sources */,
 				E7748D442C0E72A8002F1BDB /* NetworkError.swift in Sources */,
 				E7748D362C0E6679002F1BDB /* SignInView.swift in Sources */,
