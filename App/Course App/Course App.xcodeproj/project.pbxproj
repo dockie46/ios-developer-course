@@ -21,6 +21,7 @@
 		E720DD902BFDD79A0055F990 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8D2BFDD79A0055F990 /* Poppins-MediumItalic.ttf */; };
 		E720DD912BFDD79A0055F990 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8E2BFDD79A0055F990 /* Poppins-Bold.ttf */; };
 		E720DD922BFDD79A0055F990 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E720DD8F2BFDD79A0055F990 /* Poppins-Regular.ttf */; };
+		E75E08282C24D39C0084033A /* UIModule in Frameworks */ = {isa = PBXBuildFile; productRef = E75E08272C24D39C0084033A /* UIModule */; };
 		E764B3AA2C04C4670048E61D /* CategoriesNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3A92C04C4670048E61D /* CategoriesNavigationCoordinator.swift */; };
 		E764B3B22C04CC6D0048E61D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B12C04CC6D0048E61D /* ProfileView.swift */; };
 		E764B3B42C04CE110048E61D /* ProfileNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E764B3B32C04CE110048E61D /* ProfileNavigationCoordinator.swift */; };
@@ -91,12 +92,10 @@
 		E7B066642BF0199700EBE919 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */; };
 		E7B5781F2BFA8FDA007AA9FC /* BorderedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5781E2BFA8FDA007AA9FC /* BorderedModifier.swift */; };
 		E7B578212BFA9014007AA9FC /* Image+ResizableBordered.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B578202BFA9014007AA9FC /* Image+ResizableBordered.swift */; };
-		E7B578242BFA9048007AA9FC /* SelectableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B578232BFA9048007AA9FC /* SelectableButtonStyle.swift */; };
 		E7B578262BFA9D3C007AA9FC /* SwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B578252BFA9D3C007AA9FC /* SwipingView.swift */; };
 		E7B578282BFAA6B1007AA9FC /* SwipingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */; };
 		E7C38F052C0DE9B30079FA1A /* TextType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C38F042C0DE9B30079FA1A /* TextType.swift */; };
 		E7C38F072C0DE9F80079FA1A /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C38F062C0DE9F80079FA1A /* FontType.swift */; };
-		E7C38F092C0DEA0F0079FA1A /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C38F082C0DEA0F0079FA1A /* FontSize.swift */; };
 		E7C38F0B2C0DEAB30079FA1A /* TextTypeModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C38F0A2C0DEAB30079FA1A /* TextTypeModifiers.swift */; };
 		E7DEF4522BF0C0A700F0BDB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -132,6 +131,7 @@
 		E720DD8D2BFDD79A0055F990 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		E720DD8E2BFDD79A0055F990 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		E720DD8F2BFDD79A0055F990 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		E75E08262C24D3400084033A /* UIModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIModule; sourceTree = "<group>"; };
 		E764B3A92C04C4670048E61D /* CategoriesNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNavigationCoordinator.swift; sourceTree = "<group>"; };
 		E764B3B12C04CC6D0048E61D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E764B3B32C04CE110048E61D /* ProfileNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationCoordinator.swift; sourceTree = "<group>"; };
@@ -201,12 +201,10 @@
 		E7B066632BF0199700EBE919 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7B5781E2BFA8FDA007AA9FC /* BorderedModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedModifier.swift; sourceTree = "<group>"; };
 		E7B578202BFA9014007AA9FC /* Image+ResizableBordered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+ResizableBordered.swift"; sourceTree = "<group>"; };
-		E7B578232BFA9048007AA9FC /* SelectableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButtonStyle.swift; sourceTree = "<group>"; };
 		E7B578252BFA9D3C007AA9FC /* SwipingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingView.swift; sourceTree = "<group>"; };
 		E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingCard.swift; sourceTree = "<group>"; };
 		E7C38F042C0DE9B30079FA1A /* TextType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextType.swift; sourceTree = "<group>"; };
 		E7C38F062C0DE9F80079FA1A /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
-		E7C38F082C0DEA0F0079FA1A /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		E7C38F0A2C0DEAB30079FA1A /* TextTypeModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTypeModifiers.swift; sourceTree = "<group>"; };
 		E7DEF4512BF0C0A700F0BDB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75E08282C24D39C0084033A /* UIModule in Frameworks */,
 				E7748D312C0E64EC002F1BDB /* KeychainAccess in Frameworks */,
 				E783F5DA2C1B95E100B31E54 /* FirebaseFirestore in Frameworks */,
 				E783F5CF2C1B7F1D00B31E54 /* FirebaseAuth in Frameworks */,
@@ -510,6 +509,7 @@
 		E7B065FB2BEEB1A600EBE919 = {
 			isa = PBXGroup;
 			children = (
+				E75E08262C24D3400084033A /* UIModule */,
 				E7B066322BEEBE7800EBE919 /* Configurations */,
 				E7B066062BEEB1A600EBE919 /* Course App */,
 				E7B0661A2BEEBACB00EBE919 /* Course AppUITests */,
@@ -617,9 +617,6 @@
 				E7B066092BEEB1A600EBE919 /* ContentView.swift */,
 				E7B578272BFAA6B1007AA9FC /* SwipingCard.swift */,
 				2CAC0C872BFBE859006CD646 /* ScratchView.swift */,
-				2C39C7942BFD571B00DB5B33 /* HorizontalScrollView.swift */,
-				E764B3B12C04CC6D0048E61D /* ProfileView.swift */,
-				E764B3B92C0517600048E61D /* NewsView.swift */,
 				E7AEA6462C0DF75600BF18C0 /* HeaderView.swift */,
 			);
 			path = SwiftUI;
@@ -673,7 +670,6 @@
 			isa = PBXGroup;
 			children = (
 				E7C38F032C0DE9970079FA1A /* DesignSystem */,
-				E7B578222BFA9038007AA9FC /* Styles */,
 				E7B5781D2BFA8FC2007AA9FC /* ViewModifiers */,
 				E7B0664F2BF0027400EBE919 /* Views */,
 			);
@@ -692,20 +688,11 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
-		E7B578222BFA9038007AA9FC /* Styles */ = {
-			isa = PBXGroup;
-			children = (
-				E7B578232BFA9048007AA9FC /* SelectableButtonStyle.swift */,
-			);
-			path = Styles;
-			sourceTree = "<group>";
-		};
 		E7C38F032C0DE9970079FA1A /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
 				E7C38F042C0DE9B30079FA1A /* TextType.swift */,
 				E7C38F062C0DE9F80079FA1A /* FontType.swift */,
-				E7C38F082C0DEA0F0079FA1A /* FontSize.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -741,6 +728,7 @@
 				E783F5D92C1B95E100B31E54 /* FirebaseFirestore */,
 				E783F5DB2C1B95E100B31E54 /* FirebaseFirestoreCombine-Community */,
 				E783F5DD2C1B95E100B31E54 /* FirebaseFirestoreSwift */,
+				E75E08272C24D39C0084033A /* UIModule */,
 			);
 			productName = "Course App";
 			productReference = E7B066042BEEB1A600EBE919 /* App Course Dev.app */;
@@ -889,12 +877,10 @@
 				E780AFD52C1643D700C3273D /* HTTPHeader.swift in Sources */,
 				E780AFE42C17884200C3273D /* OnFirstAppear.swift in Sources */,
 				E7748D422C0E6E23002F1BDB /* MainTabBarCoordinatorEvent.swift in Sources */,
-				E7B578242BFA9048007AA9FC /* SelectableButtonStyle.swift in Sources */,
 				E79DEFD12C03CAEC00AA350B /* AppCoordinator.swift in Sources */,
 				E7748D3E2C0E6831002F1BDB /* SignInNavigationCoordinatorEvent.swift in Sources */,
 				E780AFD72C1645E900C3273D /* ImagesRouter.swift in Sources */,
 				2CAC0C882BFBE859006CD646 /* ScratchView.swift in Sources */,
-				2C39C7932BFD569A00DB5B33 /* HorizontalCollectionSwiftUICell.swift in Sources */,
 				E7748D332C0E6532002F1BDB /* KeychainManager.swift in Sources */,
 				2CC8B9F82C028967007CDEAF /* Coordinator.swift in Sources */,
 				E764B3B82C0516D30048E61D /* NewsNavigationCoordinator.swift in Sources */,
@@ -909,7 +895,6 @@
 				E7B066602BF0158700EBE919 /* UICollectionView+ReusableIdenfifier.swift in Sources */,
 				E7B0665A2BF011C000EBE919 /* Joke.swift in Sources */,
 				E780AFEA2C178D3D00C3273D /* SectionData.swift in Sources */,
-				E7C38F092C0DEA0F0079FA1A /* FontSize.swift in Sources */,
 				E7B578262BFA9D3C007AA9FC /* SwipingView.swift in Sources */,
 				E7748D382C0E6697002F1BDB /* SignInViewEvent.swift in Sources */,
 				E7B5781F2BFA8FDA007AA9FC /* BorderedModifier.swift in Sources */,
@@ -918,7 +903,6 @@
 				E7B0665D2BF012E900EBE919 /* LabelCollectionViewCell.swift in Sources */,
 				E7C38F052C0DE9B30079FA1A /* TextType.swift in Sources */,
 				E79DEFCF2C03C2D500AA350B /* CustomNavigationController.swift in Sources */,
-				E7B5782A2BFAAD14007AA9FC /* DesignSystem.swift in Sources */,
 				E7C38F052C0DE9B30079FA1A /* TextType.swift in Sources */,
 				E7748D442C0E72A8002F1BDB /* NetworkError.swift in Sources */,
 				E7748D362C0E6679002F1BDB /* SignInView.swift in Sources */,
@@ -1594,6 +1578,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E7B066412BEECE1E00EBE919 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
+		};
+		E75E08272C24D39C0084033A /* UIModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIModule;
 		};
 		E7748D302C0E64EC002F1BDB /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;

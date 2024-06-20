@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIModule
 import UIKit
 
 class HorizontalScrollingCell: UICollectionViewCell {
