@@ -4,7 +4,7 @@
 //
 //  Created by Patrik Urban on 03.06.2024.
 //
-
+import DependencyInjection
 import Foundation
 import Combine
 import os
@@ -22,10 +22,15 @@ final class SignInNavigationCoordinator: SignInCoordinating {
 
     // MARK: Public properties
     var childCoordinators: [any Coordinator] = []
+    var container: Container
 
     // MARK: Lifecycle
     deinit {
         logger.info("Deinit SingInNavigationCoordinator")
+    }
+    
+    init(container: Container) {
+        self.container = container
     }
 }
 
@@ -50,8 +55,9 @@ extension SignInNavigationCoordinator {
 // MARK: - Factory methods
 private extension SignInNavigationCoordinator {
     private func makeSignInView() -> UIViewController {
-        let signInView = SignInView()
-        signInView.eventPublisher.sink { [weak self] event in
+        let store = container.resolve(type: SigningViewStore.self)
+        let signInView = SignInView(store: store)
+        store.eventPublisher.sink { [weak self] event in
             self?.handle(event)
         }
         .store(in: &cancellables)

@@ -1,13 +1,14 @@
 //
-//  SelectableButtonStyle.swift
-//  Course App
+//  File.swift
+//  
 //
-//  Created by Patrik Urban on 19.05.2024.
+//  Created by Patrik Urban on 20.06.2024.
 //
 
+import Foundation
 import SwiftUI
-
-struct SelectableButtonStyle: ButtonStyle {
+// Define a custom ButtonStyle
+public struct SelectableButtonStyle: ButtonStyle {
     // MARK: UI constants
     private enum StyleConstant {
         static let padding: CGFloat = 10
@@ -16,12 +17,17 @@ struct SelectableButtonStyle: ButtonStyle {
         static let scaleEffectMax: CGFloat = 1
         static let cornerRadius: CGFloat = 8
     }
-
+    
     // MARK: Public variables
     @Binding var isSelected: Bool
     var color: Color
-
-    func makeBody(configuration: Configuration) -> some View {
+    
+    public init(isSelected: Binding<Bool>, color: Color) {
+        self._isSelected = isSelected
+        self.color = color
+    }
+    
+    public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(StyleConstant.padding)
             .background(color.opacity(StyleConstant.padding))

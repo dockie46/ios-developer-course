@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import DependencyInjection
 import UIKit
 import SwiftUI
 
@@ -62,10 +63,6 @@ final class OnboardingNavigationCoordinator: NSObject, OnboardingCoordinating {
         }
     }
     
-    deinit {
-        print("Deinit OnboardingNavigationCoordinator")
-    }
-    
     private(set) lazy var navigationController: UINavigationController = makeNavigationController()
     private var isNavigationControllerInjected: Bool = false
     private var cancellables = Set<AnyCancellable>()
@@ -73,13 +70,15 @@ final class OnboardingNavigationCoordinator: NSObject, OnboardingCoordinating {
     private let pageIndex: Int
     
     var childCoordinators: [any Coordinator] = []
+    var container: Container
     
-    init(pageIndex: Int = 1, navigationController: UINavigationController? = nil) {
+    init(container: Container, pageIndex: Int = 1, navigationController: UINavigationController? = nil) {
         self.pageIndex = pageIndex
+        self.container = container
         super.init()
         if let navigationController {
-            self.navigationController = navigationController
             self.isNavigationControllerInjected = true
+            self.navigationController = navigationController
         }
     }
 }

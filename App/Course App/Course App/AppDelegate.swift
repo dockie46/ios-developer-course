@@ -6,6 +6,7 @@
 //
 
 import FirebaseCore
+import UIModule
 import UIKit
 
 enum DeepLink {

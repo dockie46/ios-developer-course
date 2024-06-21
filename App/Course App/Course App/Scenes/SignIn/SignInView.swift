@@ -8,29 +8,25 @@ import Combine
 import SwiftUI
 
 struct SignInView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
-
-    private let eventSubject = PassthroughSubject<SignInViewEvent, Never>()
-
+    
+    @StateObject private var store: SigningViewStore
+    
+    init(store: SigningViewStore) {
+        _store = .init(wrappedValue: store)
+    }
+    
     var body: some View {
         Form {
-            TextField("Email", text: $email)
-            TextField("Password", text: $password)
+            TextField("Email", text: $store.state.email)
+            TextField("Password", text: $store.state.password)
                 .textContentType(.password)
+            
             Button("Sign in") {
-                eventSubject.send(.signedIn)
+                store.send(.signIn)
+            }
+            Button("Sign up") {
+                store.send(.signUp)
             }
         }
     }
-}
-// MARK: - EventEmitting
-extension SignInView: EventEmitting {
-    var eventPublisher: AnyPublisher<SignInViewEvent, Never> {
-        eventSubject.eraseToAnyPublisher()
-    }
-}
-
-#Preview {
-    SignInView()
 }

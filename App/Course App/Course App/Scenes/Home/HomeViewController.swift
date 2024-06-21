@@ -33,7 +33,6 @@ final class HomeViewController: UIViewController {
     @IBOutlet private var categoriesCollectionView: UICollectionView!
     
     // MARK: DataSource
-    private lazy var dataProvider = MockDataProvider()
     typealias DataSource = UICollectionViewDiffableDataSource<SectionData, [Joke]>
     typealias Snapshot = NSDiffableDataSourceSnapshot<SectionData, [Joke]>
     
@@ -41,11 +40,15 @@ final class HomeViewController: UIViewController {
     private lazy var cancellables = Set<AnyCancellable>()
     private lazy var logger = Logger()
     private let eventSubject = PassthroughSubject<HomeViewEvent, Never>()
+    private let jokeService: JokeServicing = JokeService(apiManager: APIManager())
+    private let store: StoreManaging = FirebaseStoreManager()
+    @Published private var data: [SectionData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         title = "Categories"
+        fetchData()
         // Do any additional setup after loading the view.
     }
 }
@@ -59,7 +62,7 @@ extension HomeViewController: EventEmitting {
 // MARK: - UICollectionViewDataSource
 private extension HomeViewController {
     func readData() {
-        dataProvider.$data.sink { [weak self] data in
+        $data.sink { [weak self] data in
             self?.applySnapshot(data: data, animatingDifferences: true)
         }
         .store(in: &cancellables)
@@ -88,9 +91,9 @@ private extension HomeViewController {
             let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
             
             let imageHorizontalScrollCell: HorizontalScrollingCell = collectionView.dequeueReusableCell(for: indexPath)
-            imageHorizontalScrollCell.setAndReloadData(section.jokes, 
-                                                       callback: { [weak self] item in
-                self?.eventSubject.send(.itemSelected(item))
+            imageHorizontalScrollCell.setAndReloadData(section.jokes,
+                                                       callback: { [weak self] item in  self?.eventSubject.send(.itemSelected(item)) },
+                                                       didLike: {  [weak self] item in  self?.storeLike(joke: item)
             })
             
             return imageHorizontalScrollCell
@@ -161,5 +164,52 @@ private extension HomeViewController {
         layout.sectionHeadersPinToVisibleBounds = true
         layout.headerReferenceSize = CGSize(width: categoriesCollectionView.contentSize.width, height: UIConstant.headerReferenceSize)
         categoriesCollectionView.setCollectionViewLayout(layout, animated: false)
+    }
+}
+
+// MARK: Data fetching
+extension HomeViewController {
+    @MainActor
+    func storeLike(joke: Joke) {
+        Task {
+            try await store.storeLike(jokeId: joke.id, liked: !joke.liked)
+        }
+    }
+    
+    @MainActor
+    func fetchData() {
+        Task {
+            let categories = try await jokeService.fetchCategories()
+
+            try await withThrowingTaskGroup(of: JokeResponse.self) { [weak self] group in
+                guard let self else {
+                    return
+                }
+
+                categories.forEach { category in
+                    for _ in 1...5 {
+                        group.addTask {
+                            try await self.jokeService.fetchJokeForCategory(category)
+                        }
+                    }
+                }
+                
+                var likes: [String: Bool] = [:]
+                var jokesResponses: [JokeResponse] = []
+                for try await jokeResponse in group {
+                    jokesResponses.append(jokeResponse)
+                    let liked = try? await store.fetchLiked(jokeId: jokeResponse.id)
+                    likes[jokeResponse.id] = liked ?? false
+                }
+
+                let dataDictionary = Dictionary(grouping: jokesResponses) { $0.categories.first ?? "" }
+                var sectionData = [SectionData]()
+                for key in dataDictionary.keys {
+                    sectionData.append(SectionData(title: key, jokes: dataDictionary[key] ?? [], likes: likes))
+                }
+                
+                data = sectionData
+            }
+        }
     }
 }

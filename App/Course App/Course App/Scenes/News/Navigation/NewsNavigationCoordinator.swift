@@ -6,6 +6,7 @@
 //
 
 import Combine
+import DependencyInjection
 import Foundation
 import SwiftUI
 
@@ -13,14 +14,19 @@ protocol NewsCoordinating: NavigationControllerCoordinator {}
 
 final class NewsNavigationCoordinator: NSObject, NewsCoordinating {
     
-    deinit {
-        print("Deinit OnboardingNavigationCoordinator")
-    }
-    
     private(set) lazy var navigationController: UINavigationController = makeNavigationController()
     private var cancellables = Set<AnyCancellable>()
     private let eventSubject = PassthroughSubject<OnboardingNavigationCoordinatorEvent, Never>()
     var childCoordinators: [any Coordinator] = []
+    var container: Container
+    
+    deinit {
+        print("Deinit OnboardingNavigationCoordinator")
+    }
+    
+    init(container: Container) {
+        self.container = container
+    }
 }
 // MARK: - EventEmitting
 extension NewsNavigationCoordinator: EventEmitting {

@@ -6,7 +6,8 @@
 //
 
 import Foundation
-enum FontSize: CGFloat {
+import SwiftUI
+public enum FontSize: CGFloat {
     case size36 = 36
     case size28 = 28
     case size20 = 20

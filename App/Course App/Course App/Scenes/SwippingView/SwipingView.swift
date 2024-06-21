@@ -15,44 +15,48 @@ struct SwipingView: View {
         static let frameDimensionMultiplier: CGFloat = 1.5
     }
     
-    private let dataProvider = MockDataProvider()
+    // MARK: Private variables
+    @StateObject private var store: SwipingViewStore
+    
+    init(store: SwipingViewStore) {
+        _store = .init(wrappedValue: store)
+    }
     
     var body: some View {
         GeometryReader { geometry in
             HStack {
                 Spacer()
                 VStack {
-                    if let jokes = dataProvider.data.first?.jokes {
-                        ZStack {
-                            ForEach(jokes, id: \.self) { joke in
-                                SwipingCard(
-                                    configuration: SwipingCard.Configuration(
-                                        image: Image(uiImage: joke.image ?? UIImage()),
-                                        title: "Category",
-                                        description: joke.text
-                                    ),
-                                    swipeStateAction: { action in
-                                        // swiftlint:disable:next disable_print
-                                        print("swipe action \(action)")
+                    ZStack {
+                        ForEach(store.state.jokes, id: \.self) { joke in
+                            SwipingCard(
+                                configuration: SwipingCard.Configuration(
+                                    title: joke.categories.first ?? "Category",
+                                    description: joke.text
+                                ),
+                                swipeStateAction: { action in
+                                    switch action {
+                                    case let .finished(direction):
+                                        store.send(.didLike(joke.id, direction == .left))
+                                    default:
+                                        break
                                     }
-                                )
-                            }
+                                }
+                            )
                         }
-                        .padding(.top, geometry.size.height / UIConstant.paddingHeight)
-                        .frame(width: geometry.size.width / UIConstant.frameDimensionDivider, height: (geometry.size.width / UIConstant.frameDimensionDivider) * UIConstant.frameDimensionMultiplier)
-                    } else {
-                        Text("Empty data!")
                     }
+                    .padding(.top, geometry.size.height / UIConstant.paddingHeight)
+                    .frame(width: geometry.size.width / UIConstant.frameDimensionDivider, height: (geometry.size.width / UIConstant.frameDimensionDivider) * UIConstant.frameDimensionMultiplier)
+                    
                     Spacer()
                 }
                 Spacer()
             }
         }
         .defaultBackgroundColor()
+        .onFirstAppear {
+            store.send(.viewDidLoad)
+        }
         .navigationTitle("Random jokes")
     }
-}
-
-#Preview {
-    SwipingView()
 }
