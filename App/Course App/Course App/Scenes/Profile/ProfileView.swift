@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProfileView: View {
     private let eventSubject = PassthroughSubject<ProfileViewEvent, Never>()
-    private let authManager = FirebaseAuthManager()
+    private let authManager = FirebaseAuthManager(keichain: KeychainService(keychainManager: KeychainManager()))
     var body: some View {
         VStack(alignment:.leading, spacing: 20) {
             

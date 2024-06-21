@@ -15,8 +15,12 @@ struct SwipingView: View {
         static let frameDimensionMultiplier: CGFloat = 1.5
     }
     
-    private let jokesService = JokeService(apiManager: APIManager())
-    @State private var jokes: [Joke] = []
+    // MARK: Private variables
+    @StateObject private var store: SwipingViewStore
+    
+    init(store: SwipingViewStore) {
+        _store = .init(wrappedValue: store)
+    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -24,15 +28,19 @@ struct SwipingView: View {
                 Spacer()
                 VStack {
                     ZStack {
-                        ForEach(jokes, id: \.self) { joke in
+                        ForEach(store.state.jokes, id: \.self) { joke in
                             SwipingCard(
                                 configuration: SwipingCard.Configuration(
-                                    title: "Category",
+                                    title: joke.categories.first ?? "",
                                     description: joke.text
                                 ),
                                 swipeStateAction: { action in
-                                    // swiftlint:disable:next disable_print
-                                    print("swipe action \(action)")
+                                    switch action {
+                                    case let .finished(direction):
+                                        store.send(.didLike(joke.id, direction == .left))
+                                    default:
+                                        break
+                                    }
                                 }
                             )
                         }
@@ -47,28 +55,8 @@ struct SwipingView: View {
         }
         .defaultBackgroundColor()
         .onFirstAppear {
-            fetchData()
+            store.send(.viewDidLoad)
         }
         .navigationTitle("Random jokes")
     }
-    
-    func fetchData() {
-        Task {
-            try await withThrowingTaskGroup(of: JokeResponse.self) { group in
-                for _ in 1...10 {
-                    group.addTask {
-                        try await jokesService.fetchRandomJoke()
-                    }
-                }
-                
-                for try await jokeResponse in group {
-                    jokes.append(Joke(jokeResponse: jokeResponse, liked: false))
-                }
-            }
-        }
-    }
-}
-
-#Preview {
-    SwipingView()
 }

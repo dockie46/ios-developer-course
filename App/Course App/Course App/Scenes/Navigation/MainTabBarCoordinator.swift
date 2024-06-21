@@ -5,18 +5,25 @@
 //  Created by Work on 25.05.2024.
 //
 import Combine
+import DependencyInjection
 import Foundation
 import UIKit
 import SwiftUI
 
 final class MainTabBarCoordinator: NSObject, TabBarControllerCoordinator {
+    
     var childCoordinators = [Coordinator]()
-    private(set) lazy var tabBarController = makeTabBarController()   
+    var container: Container
+    private(set) lazy var tabBarController = makeTabBarController()
     private lazy var cancellables = Set<AnyCancellable>()
     private let eventSubject = PassthroughSubject<MainTabBarCoordinatorEvent, Never>()
     
     deinit {
         print("Deinit MainTabBarCoordinator")
+    }
+    
+    init(container: Container) {
+        self.container = container
     }
 }
 
@@ -56,7 +63,7 @@ extension MainTabBarCoordinator {
 // MARK: Factory methods
 private extension MainTabBarCoordinator {
     func makeOnboardingFlow(pageIndex: Int) -> ViewControllerCoordinator {
-        let coordinator = OnboardingNavigationCoordinator(pageIndex: pageIndex)
+        let coordinator = OnboardingNavigationCoordinator(container: container, pageIndex: pageIndex)
         coordinator.eventPublisher
             .sink { [weak self] event in
                 self?.handle(event: event)
@@ -65,7 +72,7 @@ private extension MainTabBarCoordinator {
         return coordinator
     }
     func makeNewsFlow() -> ViewControllerCoordinator {
-        let coordinator = NewsNavigationCoordinator()
+        let coordinator = NewsNavigationCoordinator(container: container)
         coordinator.eventPublisher
             .sink { [weak self] event in
                 self?.handle(event: event)
@@ -81,7 +88,7 @@ private extension MainTabBarCoordinator {
     }
 
     func setupCategoriesView() -> UIViewController {
-        let categoriesCoordinator = CategoriesNavigationCoordinator()
+        let categoriesCoordinator = CategoriesNavigationCoordinator(container: container)
         startChildCoordinator(categoriesCoordinator)
         categoriesCoordinator.rootViewController.tabBarItem = UITabBarItem(
             title: "Categories",
@@ -92,13 +99,14 @@ private extension MainTabBarCoordinator {
     }
 
     func setupSwipingCardView() -> UIViewController {
-        let swippingCoordinator = SwipingNavigationCoordinator()
+        let swippingCoordinator = SwipingNavigationCoordinator(container: container)
         startChildCoordinator(swippingCoordinator)
         swippingCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Random", image: UIImage(systemName: "switch.2"), tag: 1)
         return swippingCoordinator.rootViewController
     }
+    
     func setupProfileView() -> UIViewController {
-        let profileCoordinator = ProfileNavigationCoordinator()
+        let profileCoordinator = ProfileNavigationCoordinator(container: container)
         startChildCoordinator(profileCoordinator)
         profileCoordinator.eventPublisher
             .sink { [weak self] event in

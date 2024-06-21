@@ -5,8 +5,9 @@
 //  Created by Patrik Urban on 26.05.2024.
 //
 
-import Foundation
 import Combine
+import DependencyInjection
+import Foundation
 import UIKit
 
 protocol AppCoordinating: ViewControllerCoordinator {}
@@ -23,7 +24,10 @@ final class AppCoordinator: AppCoordinating, ObservableObject {
     
     private lazy var cancellables = Set<AnyCancellable>()
     private lazy var keychainService = KeychainService(keychainManager: KeychainManager())
+    
+    var container = Container()
     var childCoordinators = [Coordinator]()
+    
     @Published var isAuthorizedFlow = false
     
     // MARK: Lifecycle
@@ -36,6 +40,13 @@ final class AppCoordinator: AppCoordinating, ObservableObject {
 extension AppCoordinator {
     func start() {
         setupAppUI()
+        assembleDependencyInjectionContainer()
+    }
+    
+    func assembleDependencyInjectionContainer() {
+        ManagerRegistration.registerDependencies(to: container)
+        ServiceRegistration.registerDependencies(to: container)
+        StoreRegistration.registerDependencies(to: container)
     }
 
     func setupAppUI() {
@@ -46,7 +57,7 @@ extension AppCoordinator {
     }
     
     func makeSignInFlow() -> ViewControllerCoordinator {
-        let signInCoordinator = SignInNavigationCoordinator()
+        let signInCoordinator = SignInNavigationCoordinator(container: container)
         startChildCoordinator(signInCoordinator)
         signInCoordinator.eventPublisher.sink { [weak self] event in
             self?.handle(event)
@@ -56,7 +67,7 @@ extension AppCoordinator {
     }
 
     func makeTabBarFlow() -> ViewControllerCoordinator {
-        let mainTabCoordinator = MainTabBarCoordinator()
+        let mainTabCoordinator = MainTabBarCoordinator(container: container)
         startChildCoordinator(mainTabCoordinator)
         mainTabCoordinator.eventPublisher.sink { [weak self] event in
             self?.handle(event)

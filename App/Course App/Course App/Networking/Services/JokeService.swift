@@ -10,7 +10,7 @@ import Foundation
 final class JokeService: JokeServicing {
     let apiManager: APIManaging
 
-    init(apiManager: APIManager) {
+    init(apiManager: APIManaging) {
         self.apiManager = apiManager
     }
 }
