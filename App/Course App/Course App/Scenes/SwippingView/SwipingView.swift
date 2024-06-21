@@ -31,7 +31,7 @@ struct SwipingView: View {
                         ForEach(store.state.jokes, id: \.self) { joke in
                             SwipingCard(
                                 configuration: SwipingCard.Configuration(
-                                    title: joke.categories.first ?? "",
+                                    title: joke.categories.first ?? "Category",
                                     description: joke.text
                                 ),
                                 swipeStateAction: { action in
