@@ -32,7 +32,7 @@ final class AppCoordinator: AppCoordinating, ObservableObject {
     
     // MARK: Lifecycle
     init() {
-        isAuthorizedFlow = (try? keychainService.fetchAuthData()) != nil
+        
     }
 }
 
@@ -41,6 +41,8 @@ extension AppCoordinator {
     func start() {
         setupAppUI()
         assembleDependencyInjectionContainer()
+        
+        isAuthorizedFlow = (try? container.resolve(type: KeychainServicing.self).fetchAuthData()) != nil
     }
     
     func assembleDependencyInjectionContainer() {

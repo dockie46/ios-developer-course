@@ -18,8 +18,7 @@ struct SignInView: View {
     var body: some View {
         Form {
             TextField("Email", text: $store.state.email)
-            TextField("Password", text: $store.state.password)
-                .textContentType(.password)
+            SecureField("Password", text: $store.state.password)
             
             Button("Sign in") {
                 store.send(.signIn)

@@ -8,8 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		2C39C7912BFD510B00DB5B33 /* BackgroundColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C39C7902BFD510B00DB5B33 /* BackgroundColorModifier.swift */; };
+		2C4ABB782C28C05400A40C4F /* KeychainManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEA6632C0E613500BF18C0 /* KeychainManaging.swift */; };
+		2C4ABB792C28C05800A40C4F /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7748D322C0E6532002F1BDB /* KeychainManager.swift */; };
+		2C4ABB7A2C28C05C00A40C4F /* KeychainServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEA65A2C0E60AF00BF18C0 /* KeychainServicing.swift */; };
+		2C4ABB7B2C28C06200A40C4F /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEA65C2C0E60E800BF18C0 /* KeychainService.swift */; };
+		2C4ABB7C2C28C19700A40C4F /* KeychainManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEA65F2C0E610E00BF18C0 /* KeychainManagerError.swift */; };
+		2C4ABB7E2C28C2D700A40C4F /* MockKeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABB7D2C28C2D700A40C4F /* MockKeyChainManager.swift */; };
 		2C72CB082BF4038900E894B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C72CB072BF4038900E894B0 /* Images.xcassets */; };
 		2C81DA8F2C052839001A9BDB /* EventEmitting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81DA8E2C052839001A9BDB /* EventEmitting.swift */; };
+		2C9244FC2C28C85F00DFF228 /* MockAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9244FB2C28C85F00DFF228 /* MockAuthManager.swift */; };
+		2C9244FD2C28CCF500DFF228 /* MockKeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABB7D2C28C2D700A40C4F /* MockKeyChainManager.swift */; };
+		2C9244FE2C28CCF800DFF228 /* MockKeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABB7D2C28C2D700A40C4F /* MockKeyChainManager.swift */; };
+		2C9244FF2C28CD7600DFF228 /* KeychainManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEA6632C0E613500BF18C0 /* KeychainManaging.swift */; };
 		2C9910572BF150D30025FDEE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2C9910562BF150D30025FDEE /* FirebaseAnalytics */; };
 		2CAC0C882BFBE859006CD646 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC0C872BFBE859006CD646 /* ScratchView.swift */; };
 		2CC8B9F82C028967007CDEAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8B9F72C028967007CDEAF /* Coordinator.swift */; };
@@ -130,8 +140,10 @@
 
 /* Begin PBXFileReference section */
 		2C39C7902BFD510B00DB5B33 /* BackgroundColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorModifier.swift; sourceTree = "<group>"; };
+		2C4ABB7D2C28C2D700A40C4F /* MockKeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeyChainManager.swift; sourceTree = "<group>"; };
 		2C72CB072BF4038900E894B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C81DA8E2C052839001A9BDB /* EventEmitting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitting.swift; sourceTree = "<group>"; };
+		2C9244FB2C28C85F00DFF228 /* MockAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthManager.swift; sourceTree = "<group>"; };
 		2CAC0C872BFBE859006CD646 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
 		2CC8B9F72C028967007CDEAF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2CC8B9F92C028B4C007CDEAF /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
@@ -396,6 +408,7 @@
 			children = (
 				E783F5CC2C1B7EF000B31E54 /* FirebaseAuthManaging.swift */,
 				E783F5D22C1B7F7900B31E54 /* FirebaseAuthManager.swift */,
+				2C9244FB2C28C85F00DFF228 /* MockAuthManager.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -548,6 +561,7 @@
 			children = (
 				E7AEA65A2C0E60AF00BF18C0 /* KeychainServicing.swift */,
 				E7AEA65C2C0E60E800BF18C0 /* KeychainService.swift */,
+				2C4ABB7D2C28C2D700A40C4F /* MockKeyChainManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -934,6 +948,7 @@
 				E7B0663F2BEEC88A00EBE919 /* BuildConfiguration.swift in Sources */,
 				2CC8B9FA2C028B4C007CDEAF /* ViewControllerCoordinator.swift in Sources */,
 				E764B3AA2C04C4670048E61D /* CategoriesNavigationCoordinator.swift in Sources */,
+				2C9244FC2C28C85F00DFF228 /* MockAuthManager.swift in Sources */,
 				E780AFD52C1643D700C3273D /* HTTPHeader.swift in Sources */,
 				E780AFE42C17884200C3273D /* OnFirstAppear.swift in Sources */,
 				E7748D422C0E6E23002F1BDB /* MainTabBarCoordinatorEvent.swift in Sources */,
@@ -967,6 +982,7 @@
 				2C81DA8F2C052839001A9BDB /* EventEmitting.swift in Sources */,
 				E780AFE02C1650D500C3273D /* JokeService.swift in Sources */,
 				E7B0665D2BF012E900EBE919 /* LabelCollectionViewCell.swift in Sources */,
+				2C9244FD2C28CCF500DFF228 /* MockKeyChainManager.swift in Sources */,
 				E75E08342C24DDFC0084033A /* StoreRegistration.swift in Sources */,
 				E7C38F052C0DE9B30079FA1A /* TextType.swift in Sources */,
 				E79DEFCF2C03C2D500AA350B /* CustomNavigationController.swift in Sources */,
@@ -1006,7 +1022,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7B0661C2BEEBACB00EBE919 /* Course_AppUITests.swift in Sources */,
+				2C9244FE2C28CCF800DFF228 /* MockKeyChainManager.swift in Sources */,
 				E7B0661E2BEEBACB00EBE919 /* Course_AppUITestsLaunchTests.swift in Sources */,
+				2C9244FF2C28CD7600DFF228 /* KeychainManaging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,7 +1032,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4ABB7C2C28C19700A40C4F /* KeychainManagerError.swift in Sources */,
+				2C4ABB7A2C28C05C00A40C4F /* KeychainServicing.swift in Sources */,
 				E7B0662B2BEEBC2B00EBE919 /* Course_Tests.swift in Sources */,
+				2C4ABB792C28C05800A40C4F /* KeychainManager.swift in Sources */,
+				2C4ABB7B2C28C06200A40C4F /* KeychainService.swift in Sources */,
+				2C4ABB782C28C05400A40C4F /* KeychainManaging.swift in Sources */,
+				2C4ABB7E2C28C2D700A40C4F /* MockKeyChainManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1266,6 +1290,7 @@
 		E7B0662F2BEEBC2B00EBE919 /* Development - Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A3C6TC3D;
@@ -1283,6 +1308,7 @@
 		E7B066302BEEBC2B00EBE919 /* Development - Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A3C6TC3D;
@@ -1407,6 +1433,7 @@
 		E7B066382BEEC37D00EBE919 /* Production - Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A3C6TC3D;
@@ -1538,6 +1565,7 @@
 		E7B0663C2BEEC38800EBE919 /* Production - Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32A3C6TC3D;
