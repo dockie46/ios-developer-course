@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIModule
 import UIKit
 
 class HorizontalScrollingCell: UICollectionViewCell {
@@ -15,6 +16,7 @@ class HorizontalScrollingCell: UICollectionViewCell {
     private let collectionView: UICollectionView
     private var jokes: [Joke] = []
     private var didTapCallback: Action<Joke>?
+    private var didLikeCallback: Action<Joke>?
     
     override init(frame: CGRect) {
         let layout = UICollectionViewFlowLayout()
@@ -56,13 +58,24 @@ extension HorizontalScrollingCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.contentConfiguration = UIHostingConfiguration {
-            Image(uiImage: jokes[indexPath.row].image ?? UIImage())
-                .resizableBordered(cornerRadius: UIConstant.radius, color: .blue)
+        let joke = jokes[indexPath.row]
+        cell.contentConfiguration = UIHostingConfiguration { [weak self] in
+            if let url = try?
+                ImagesRouter.size300x200.asURLRequest().url {
+                AsyncImage(url: url) { image in
+                    image.resizableBordered(cornerRadius: UIConstant.radius, color: .blue)
+                        .scaledToFit()
+                } placeholder: {
+                    Color.gray
+                }
+                ButtonLike(selected: joke.liked, callback: {
+                    self?.didLikeCallback?(joke)
+                })
+            } else {
+                Text("ERROR MESSAGE")
+            }
         }
-        //        let cell: ImageCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        //        cell.imageView.image = jokes[indexPath.item].image
-        //        return cell
+        
         return cell
     }
 }
@@ -76,10 +89,11 @@ extension HorizontalScrollingCell: UICollectionViewDelegateFlowLayout {
 
 // MARK: PassData
 extension HorizontalScrollingCell {
-    func setAndReloadData(_ jokes: [Joke], callback: Action<Joke>? = nil) {
+    func setAndReloadData(_ jokes: [Joke], callback: Action<Joke>? = nil, didLike: Action<Joke>? = nil) {
         self.jokes = jokes
         collectionView.reloadData()
         didTapCallback = callback
+        didLikeCallback = didLike
     }
 }
 
@@ -91,3 +105,24 @@ extension HorizontalScrollingCell: UICollectionViewDelegate {
 }
 
 extension UICollectionViewCell: ReusableIdentifier {}
+
+
+struct ButtonLike: View {
+    @State private var selected: Bool
+    var callback: (() -> Void)?
+    
+    init(selected: Bool, callback: (() -> Void)? = nil) {
+        self.selected = selected
+        self.callback = callback
+    }
+
+    var body: some View {
+        Button(action: {
+            selected.toggle()
+            self.callback?()
+        }, label: {
+            Image(systemName: "heart")
+        })
+        .buttonStyle(SelectableButtonStyle(isSelected: $selected, color: Color.gray))
+    }
+}

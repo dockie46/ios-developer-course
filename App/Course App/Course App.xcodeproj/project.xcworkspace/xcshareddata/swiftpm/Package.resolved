@@ -1,5 +1,5 @@
 {
-  "originHash" : "a12b31633ff99eaaf89dbd146574ecab221e7768c511ae1ce76af742b92a8c92",
+  "originHash" : "4237d34f61320902d515837914752d351951b41d15f5298580b489af52b045e2",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -80,6 +80,15 @@
       "state" : {
         "revision" : "2d12673670417654f08f5f90fdd62926dc3a2648",
         "version" : "100.0.0"
+      }
+    },
+    {
+      "identity" : "ios-dependency-injection",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/strvcom/ios-dependency-injection",
+      "state" : {
+        "revision" : "8dbf23b56f11ecc34580745d16141e4d2a4c5129",
+        "version" : "1.0.3"
       }
     },
     {

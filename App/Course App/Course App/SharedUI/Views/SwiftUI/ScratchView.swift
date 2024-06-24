@@ -17,7 +17,6 @@ struct ScratchView: View {
         static let radius: CGFloat = 10
     }
     // MARK: Variables
-    let image: Image
     let text: String
 
     @State private var currentLine = Line()
@@ -25,9 +24,17 @@ struct ScratchView: View {
 
     var body: some View {
         ZStack(alignment: .top) {
-            image
-                .resizableBordered(cornerRadius: UIConstant.radius)
-                .scaledToFit()
+            if let url = try?
+                ImagesRouter.size300x200.asURLRequest().url {
+                AsyncImage(url: url) { image in
+                    image.resizableBordered(cornerRadius: UIConstant.radius)
+                        .scaledToFit()
+                } placeholder: {
+                    Color.gray
+                }
+            } else {
+                Text("ERROR MESSAGE")
+            }
 
             RoundedRectangle(cornerRadius: UIConstant.radius)
                 .fill(.bg)
@@ -62,5 +69,5 @@ struct ScratchView: View {
 }
 
 #Preview {
-    ScratchView(image: Image("nature"), text: "Joke")
+    ScratchView(text: "Joke")
 }

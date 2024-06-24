@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIModule
 import SwiftUI
 
 enum FontType: String {
